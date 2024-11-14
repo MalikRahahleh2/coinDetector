@@ -320,13 +320,13 @@
       "languageVersion": "3.2"
     },
     {
-      "name": "demo_camera",
+      "name": "coin_detector",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "3.5"
     }
   ],
-  "generated": "2024-11-14T10:04:38.016421Z",
+  "generated": "2024-11-14T10:11:00.723410Z",
   "generator": "pub",
   "generatorVersion": "3.5.3",
   "flutterRoot": "file:///Users/maliknadsoft/developer/flutter",

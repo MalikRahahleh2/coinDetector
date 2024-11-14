@@ -1,7 +1,8 @@
 import 'dart:async';
 import 'dart:ui' as ui;
-import 'package:demo_camera/object_detect_logic.dart';
-import 'package:demo_camera/yolo.dart';
+
+import 'package:coin_detector/object_detect_logic.dart';
+import 'package:coin_detector/yolo.dart';
 import 'package:flutter/material.dart';
 
 import 'object_detect.dart';

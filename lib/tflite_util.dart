@@ -1,10 +1,10 @@
 import 'dart:io';
 import 'dart:math';
 import 'dart:typed_data';
+import 'package:coin_detector/image_util.dart';
+import 'package:coin_detector/time_util.dart';
 import 'package:collection/collection.dart';
-import 'package:demo_camera/image_util.dart';
-import 'package:demo_camera/math_util.dart';
-import 'package:demo_camera/time_util.dart';
+
 import 'package:tflite_flutter/tflite_flutter.dart';
 // import 'package:tflite_flutter_helper/tflite_flutter_helper.dart';
 import 'package:image/image.dart' as image_lib;

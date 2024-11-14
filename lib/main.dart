@@ -1,4 +1,4 @@
-import 'package:demo_camera/camera_screen.dart';
+import 'package:coin_detector/camera_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

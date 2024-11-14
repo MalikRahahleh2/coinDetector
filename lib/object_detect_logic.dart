@@ -1,5 +1,7 @@
-import 'package:demo_camera/yolo.dart';
-import 'package:demo_camera/math_util.dart';
+
+
+import 'package:coin_detector/math_util.dart';
+import 'package:coin_detector/yolo.dart';
 
 extension BoundingBoxCalculations on BoundingBox<double> {
 

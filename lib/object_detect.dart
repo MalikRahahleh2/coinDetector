@@ -2,9 +2,9 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:typed_data';
 
+import 'package:coin_detector/image_util.dart';
 import 'package:collection/collection.dart';
 import 'package:camera/camera.dart';
-import 'package:demo_camera/image_util.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:image/image.dart' as image_lib;
 import 'package:tflite_flutter/tflite_flutter.dart';

@@ -1,0 +1,3259 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		1EFDDC32A34D56D411E640A81DCD9E73 /* Flutter */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 94078A06C17E946ADC1F2C06726219E5 /* Build configuration list for PBXAggregateTarget "Flutter" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = Flutter;
+		};
+		AC559E53E13B6FBEF4F5CC310A73AFE6 /* TensorFlowLiteC */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 4C70CA840A9A95B3AE4B417998D17300 /* Build configuration list for PBXAggregateTarget "TensorFlowLiteC" */;
+			buildPhases = (
+				CCB8A945E354CCB35B939DFBE3FF09CF /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+			);
+			name = TensorFlowLiteC;
+		};
+		E21B750823D431C0E227E6826B3218B8 /* tflite_flutter */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A1457EC6960851BE06898188382EC2DF /* Build configuration list for PBXAggregateTarget "tflite_flutter" */;
+			buildPhases = (
+			);
+			dependencies = (
+				51915938A6751C4322B7E934213CFC66 /* PBXTargetDependency */,
+				5614D0AEAB5A55710811491EFD32E56E /* PBXTargetDependency */,
+			);
+			name = tflite_flutter;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		01728FBE48DED74843EFD8F0F3754673 /* SpeechPermissionStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3908DECD6B1CD38628139157C310E4 /* SpeechPermissionStrategy.m */; };
+		02F073785C3533903ECB85AB642FB324 /* PhotoPermissionStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA028F6B0870BF91A1B991092E8D370 /* PhotoPermissionStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		041B668A63863EEF5865CFD83CC27F76 /* MediaLibraryPermissionStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = D764B29603A9C099556F137336362185 /* MediaLibraryPermissionStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05EA6C32FE16EFD546279FFCB0F5E058 /* SensorPermissionStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 08772359CDABCB6CA702E5F4A785C498 /* SensorPermissionStrategy.m */; };
+		0637CE0AC40B94077397EBBA06CBA067 /* AppTrackingTransparencyPermissionStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D076E3F4D9CCB571BA3D22BF82B1E50 /* AppTrackingTransparencyPermissionStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		06FB77DE5182BA1749CFC7CAD9EEE1C7 /* UnknownPermissionStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 693633C1A86B1926F66F2F020D76FD39 /* UnknownPermissionStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		074591B4A2D8E276750EC96E559B9DBB /* FLTCam.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E2D722E1816B55B9C6BB61B1980F8E /* FLTCam.m */; };
+		07A5D49566F14D9FFB90C9F24317DFFE /* FLTThreadSafeEventChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 813462990F87087E584CC3EA4C52BC6F /* FLTThreadSafeEventChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D55917611CA7121151B650F97A4315B /* FLTSavePhotoDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91811B857C44781F5394E94F6B17E5A2 /* FLTSavePhotoDelegate.m */; };
+		0E84BE689228E901A78F319E7304B4F6 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE79ACCB1AED2837B5F37F0C237634E /* Delegate.swift */; };
+		10CE4F0E0F5C1B1346504F7214238993 /* StoragePermissionStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = C4DB0AAC946B23B66BE22DA67064355D /* StoragePermissionStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		114B3E2B37B8DAD425305B30F2B451A7 /* CameraProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F232A611E60237592CF277662F61835 /* CameraProperties.m */; };
+		15A57018FE4E6509BC912279A8000A59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		165DB6A317D70F59336F495C144D044D /* FLTCam.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC92EA535F6601E1FB12855A9D08396 /* FLTCam.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		178E5CE6DA19C40978AB6A1F6544608F /* CameraProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 75D2C546AAFF469BA69DCD36CB6E1B5B /* CameraProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BCFC4C74EF53B2130F17B7594876076 /* TensorFlowLiteSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DB2C3B14F6841276B32CA318268B7E5 /* TensorFlowLiteSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		205133714A6B1EEB681A8AD1EB91F9B9 /* BluetoothPermissionStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = D40E0D3564380D443625FDCBCBF4569F /* BluetoothPermissionStrategy.m */; };
+		2401C748AE4FF4DEE2BCD2FE45495109 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		243A263256A34F58C00D48AB417E1FB7 /* MediaLibraryPermissionStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BE36E3B0029B20E51FAFD956CAD055 /* MediaLibraryPermissionStrategy.m */; };
+		258D55120579536CC6F57F97BBA5F882 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		267F0A688FBD79D8D8B5006DB65DEC03 /* PermissionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A6DA873977397F98CACFD232CD2AC7B /* PermissionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29C4A6545CEB790B3C53AA9056A9BF86 /* LocationPermissionStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = AA465A90AD60EA10D823C315F24118FF /* LocationPermissionStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D58F98A94AA3F152B3F2794AF3BA6B1 /* messages.g.h in Headers */ = {isa = PBXBuildFile; fileRef = 72072242E07D53CED7022405764A0A8A /* messages.g.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DC915465ED14D45FEB9EF62F44D7375 /* Codec.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FE648D88C8F4B460F8244831D5A1A5 /* Codec.m */; };
+		3EF9C8E6D4EEE844A4651E111E18DA7D /* CriticalAlertsPermissionStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = C0F32469978C80A92052C135A285634F /* CriticalAlertsPermissionStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4177D3B1F798681D5C658D2D2D145618 /* AssistantPermissionStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8164888785861C8A02C79675FBE777 /* AssistantPermissionStrategy.m */; };
+		41D315C76A494CAFEE3A1AF74B8002EC /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = D3BF704301FF1E45A0CB21687F8CF99D /* PrivacyInfo.xcprivacy */; };
+		42C50D131DE0D5BB9C4280045F76F810 /* Codec.h in Headers */ = {isa = PBXBuildFile; fileRef = 4595CFEA2D78A22B8EF340A589E5E7D8 /* Codec.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		481802C94C61A0305CDBA03350586E74 /* camera_avfoundation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 35428F75C12FB8FE19E57B10E9714632 /* camera_avfoundation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AA65F2AD5C82E181D64832BE2B4F9CA /* CriticalAlertsPermissionStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = F42CDD574886536724FCF0026DD48C6E /* CriticalAlertsPermissionStrategy.m */; };
+		4AE024DE7ED31089DF0FF480EC4A6CBE /* Interpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39470CD68B233703B17D0BAD111129BC /* Interpreter.swift */; };
+		4E2DD7D006B85DB28BD826502DABAAA8 /* permission_handler_apple-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 854F5807BB4721E884942BACFC053DB9 /* permission_handler_apple-dummy.m */; };
+		50A1DC3F70CF86CA12FFD9F818046419 /* QueueUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 892391A3157936AD4ADD124E3ECE2E82 /* QueueUtils.m */; };
+		51988BAA70534E2EBDD5835141EC33AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		5840A8AFA1BF8CA9DC36D9D527F1AEEF /* EventPermissionStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7865733BEC4B7F48D12DC0CB7A9D6F7 /* EventPermissionStrategy.m */; };
+		5B36F08A6E83651FC213340E9F2CA55F /* LocationPermissionStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = A3917A05F1500107558981DED4CB89EC /* LocationPermissionStrategy.m */; };
+		61B0E49AAD8147326F41A00E293FD626 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		67FB6C49C79C1868FDA03F3829653048 /* SpeechPermissionStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EBE2FD27755CBA348AA6A154C0B0E6A /* SpeechPermissionStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		691AAEFE844531D32DB4751B6057183E /* SensorPermissionStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = ED29329F14A4E417288DFF3C633C6407 /* SensorPermissionStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		69FB4CEF858006273792F1BDB1250500 /* AssistantPermissionStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = E4E0D8308DEA3975A5375601271CA330 /* AssistantPermissionStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B1E62EB116E7D7A6252B6F079890306 /* Pods-RunnerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8758A56177F57A2EE30894AA6F81B31A /* Pods-RunnerTests-dummy.m */; };
+		6D242738248FE37D2B2871D8C37B79D2 /* Pods-Runner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BCC84BDE7260B712B097666E169A193C /* Pods-Runner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D8C0300E46726817C3814E1DB670A15 /* ContactPermissionStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = D751CAAAA3FAF114EAAA2E8B3A0D84AE /* ContactPermissionStrategy.m */; };
+		6F502FBF67A4235635F29850AA503515 /* PermissionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDC108954D602C70B3C7CB81DE1C7AC /* PermissionManager.m */; };
+		71E60BC325CA3FE1826B00B21051C0FC /* SignatureRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F9D858ABBD823B99FAF2BA4E83678E /* SignatureRunner.swift */; };
+		7301090B60FC92CBC2D00EBEB62B6754 /* BluetoothPermissionStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = D56068C1645F9DDD67DF20CCA587B06C /* BluetoothPermissionStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74FABC77C7E9D4AADDB0C7DE54F27D64 /* PermissionHandlerPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 17006B4B9FD1B80AF66407355B44D252 /* PermissionHandlerPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79000FBEDC0505F04ED1DC78E93BDD14 /* UnknownPermissionStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3ADB02F76F79C962BF8F2413673B57 /* UnknownPermissionStrategy.m */; };
+		7C624736335D95B33D9B3D8D3E61FF99 /* ContactPermissionStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = F72E27615FA48B1EAADB9F584841A446 /* ContactPermissionStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80DDFFD16A2A827CDA0E904DB50FFDCA /* Pods-Runner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB131F3BC1D6D2C79680B59CF30EF6B /* Pods-Runner-dummy.m */; };
+		874CC5295247524E9A8D10B2F82FF10B /* camera_avfoundation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C9753A7E2083A2CC84D93790A0650A /* camera_avfoundation-dummy.m */; };
+		897972E5A18F802319B01D1E6FF23DD9 /* SignatureRunnerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044AFD5272B85A5CAAC87039FF683DF7 /* SignatureRunnerError.swift */; };
+		8AA349010C26E997B0ECE733B5A270E7 /* StoragePermissionStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF969F1EF2E707170515B4B5E75307A /* StoragePermissionStrategy.m */; };
+		8D82BB4C9829EAE7B94E4F6F382EF5D2 /* camera_avfoundation-camera_avfoundation_privacy in Resources */ = {isa = PBXBuildFile; fileRef = F98E22378D717282AC5FEBD48292E0CC /* camera_avfoundation-camera_avfoundation_privacy */; };
+		93141300C7561592E836207046B973B6 /* AppTrackingTransparencyPermissionStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3538A2340E7DC070F3C0084156997B /* AppTrackingTransparencyPermissionStrategy.m */; };
+		945F0082BA1629D525DDE40E29A1102A /* NotificationPermissionStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE99486397B5E47220922297E3DDC30 /* NotificationPermissionStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		972BCA69C1F4E79B79AAEC090DAAE320 /* BackgroundRefreshStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFF8E0070C624A15D48C60EFE70948B /* BackgroundRefreshStrategy.m */; };
+		A17B0E1EF47521EA44FFC916B92A936A /* QuantizationParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CDBCB2345AD34EE1C325F8D422BFA6 /* QuantizationParameters.swift */; };
+		A5DA5364F97236592BFF13E9A7B2EC2A /* FLTSavePhotoDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = E64FC2B0CBAE2B2D1A18F8031051C622 /* FLTSavePhotoDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6F0D0633FD9140EDC3E0958C1E56E57 /* TensorFlowLiteSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4342E4D6CC739E919417CF0F2AC890E1 /* TensorFlowLiteSwift-dummy.m */; };
+		A81C855C5C23E768172CD7FA242FF8B6 /* FLTThreadSafeEventChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = B71FDE635E0DAB8A1C4CF2FD59DEF34E /* FLTThreadSafeEventChannel.m */; };
+		A853C9BFF9EDDC2D9CFCDDF5E62BAA59 /* Tensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747E50173A5DBC2DDB6FE6A7B5E80D80 /* Tensor.swift */; };
+		AA703F1B4EDF4A1B790C1B379B62F731 /* PermissionStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 05C9B888D0A063DAF73556C3C9D22956 /* PermissionStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAE3929CC5A4AA7FEEA202BB01D50E3B /* PermissionHandlerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = E58D735DD82BB4E8C0F6FD656DC0E0DE /* PermissionHandlerPlugin.m */; };
+		ACF3B554C852F90A8AF30098A76FF9CB /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A79B0C5509305686BFB5BB08D825B332 /* PrivacyInfo.xcprivacy */; };
+		AE5D41411EF87256B17CBAAFD5354F49 /* TensorFlowLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAB8078A81735E3F592621E43C46931 /* TensorFlowLite.swift */; };
+		B0D877D060E4E1D3798B293A2FDB6549 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682F91207DB5B92B0A335A10BC1DD948 /* Model.swift */; };
+		B5300FBB6452C1FF593163E08CA3872E /* PermissionHandlerEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 49B02BC6880B058B423176A5FF7DB8C3 /* PermissionHandlerEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB0BAF37B568EC228B594D63007415A1 /* PhonePermissionStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 06D5C8EF973889CC6A214873AE580268 /* PhonePermissionStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE856542B5B6837F5A04AE208EB7488F /* CameraPermissionUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 283DF676550D13FA341666C4822156F5 /* CameraPermissionUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5922091BA81B1AC8C0D48788F95D5B4 /* BackgroundRefreshStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EDAD7CB99F968AE4DA587C921EFEF1E /* BackgroundRefreshStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7617CED5919806C617AE5208E090761 /* CameraPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 1281ECDFD8F64134B4BE456827858476 /* CameraPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBC3C64FDC65E285C99495363A9AA188 /* permission_handler_apple-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 800B51CFFB384192C557ABB6C243A9FF /* permission_handler_apple-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC61F3DAC8A5F5DCC0EFD5E3F9484B57 /* QueueUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 30EFD756CD8577AA429F9FB7287A3A70 /* QueueUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF775F42C9037777D727747EF2EFBC65 /* EventPermissionStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = B55246F181DD02C299D72318761E3FF5 /* EventPermissionStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D09C13147A53F83D961C472B7723C79D /* FLTSavePhotoDelegate_Test.h in Headers */ = {isa = PBXBuildFile; fileRef = 784B7A48E746AC16E259D1D5C4E59A54 /* FLTSavePhotoDelegate_Test.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2AB4BA90AF02360345CFF4F2074F317 /* CameraPermissionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 91DF71CF5C26179A4503DDC1B9350CC2 /* CameraPermissionUtils.m */; };
+		D381CDCDFEA259E19EB4267B4173BC76 /* CoreMLDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587F324D6CD4CFD109AD544AA7FBEC07 /* CoreMLDelegate.swift */; };
+		D45D7E9E46458C3945F516B680ABE7B4 /* FLTCamMediaSettingsAVWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F8EAC1392759822E469B99CC1BFB7A /* FLTCamMediaSettingsAVWrapper.m */; };
+		D8197AE7C73CAF7A8A091365CCAF5B6D /* AudioVideoPermissionStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = DA3AEAEBDF93661AFA810EB2A2682934 /* AudioVideoPermissionStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD107C4734C9A6E4B0E95532ABFF2C25 /* AudioVideoPermissionStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB548F91B41B28B2E631A2A4133563 /* AudioVideoPermissionStrategy.m */; };
+		DF94488574FEAD48FD71E0A067ABBCB7 /* PhonePermissionStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 543E2C17E1739E069E231E89844AA60B /* PhonePermissionStrategy.m */; };
+		EA06C88D478A61FDC5A5AC1B9AB48086 /* NotificationPermissionStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B96F4B768D61A15FC3D0FE937F61AFB /* NotificationPermissionStrategy.m */; };
+		EA3A22B82FCCBFA0A31349459FCAC69F /* InterpreterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2FD352565BE929504AB33EAAA4B65 /* InterpreterError.swift */; };
+		ED83A2682F7828FC2A827A08141DD031 /* FLTCamMediaSettingsAVWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = A34B3712308AA5A9D809A1CF5430B6AD /* FLTCamMediaSettingsAVWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F12D662924FB65FA351D223F28AEF0DA /* messages.g.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C1394B2A4D7E26B2202A544CB4B99D /* messages.g.m */; };
+		F3B39A5FE04A2299FC10EA3DD830B860 /* PhotoPermissionStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 192434045658903A36760413A048C6F1 /* PhotoPermissionStrategy.m */; };
+		F5F34F334736CBF554FB5577806A7D44 /* CameraPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 781321E58C28B062EBD06ECA376DF160 /* CameraPlugin.m */; };
+		F91EFDE3107CF6BA8E79093395DBF2D5 /* CameraPlugin_Test.h in Headers */ = {isa = PBXBuildFile; fileRef = 59310283B9662A72E7091E1BEE67A41B /* CameraPlugin_Test.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA645E66A4FCCA888B29A3E22962DFA2 /* FLTCam_Test.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E921704116BCAAA152CED22FAA92660 /* FLTCam_Test.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAB320FF6CE7100C86B9B5190C5D2B80 /* MetalDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8965A284EDFC37A52C7F448737BF487 /* MetalDelegate.swift */; };
+		FC05A1BE39A9244D5B09A2F3B09A967A /* Pods-RunnerTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CB04EB554430E41E5A19EDE6D62C9F2 /* Pods-RunnerTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		15FBCD3E88AFA94ADC2F4E661E647408 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B74B458B450D74B75744B87BD747314;
+			remoteInfo = "Pods-Runner";
+		};
+		2CF4FAA998F172C8D969BB1A0FA7E5E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10418167F619D6DA72BADAD10F9EC02B;
+			remoteInfo = TensorFlowLiteSwift;
+		};
+		3E48250126E794EAC476A281346B97ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E21B750823D431C0E227E6826B3218B8;
+			remoteInfo = tflite_flutter;
+		};
+		5A97F6FF7841C2FB5AC933B683CCB87E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B1B7EBF63BB39238A152C7553F0A9FD;
+			remoteInfo = camera_avfoundation;
+		};
+		600395999B803131DFE2BC2BD9BBA146 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10418167F619D6DA72BADAD10F9EC02B;
+			remoteInfo = TensorFlowLiteSwift;
+		};
+		70D42429B3DF6635870B26EA894AB239 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC559E53E13B6FBEF4F5CC310A73AFE6;
+			remoteInfo = TensorFlowLiteC;
+		};
+		7A6C0C508C8FD74CFE485EDC694D0873 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 517E8BED8B0E6D6FD078BD19B0A13893;
+			remoteInfo = "permission_handler_apple-permission_handler_apple_privacy";
+		};
+		7CF2AEBC7BB40D9B8A4985BE31DC387F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EFDDC32A34D56D411E640A81DCD9E73;
+			remoteInfo = Flutter;
+		};
+		8C9061B1E3A573F44320DCD24C003DB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9677C5D523C2FD0AE2B9C4A7BDA913F;
+			remoteInfo = "camera_avfoundation-camera_avfoundation_privacy";
+		};
+		94151BA9152466FB0327FFDEAED2DC40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC559E53E13B6FBEF4F5CC310A73AFE6;
+			remoteInfo = TensorFlowLiteC;
+		};
+		AE6903CADFF43EF717ADD3ED3919B8B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EFDDC32A34D56D411E640A81DCD9E73;
+			remoteInfo = Flutter;
+		};
+		B162363419DD0B2626501730B798713A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EFDDC32A34D56D411E640A81DCD9E73;
+			remoteInfo = Flutter;
+		};
+		F3D56A1F8F9A9F8E65F89341DB074D71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EFDDC32A34D56D411E640A81DCD9E73;
+			remoteInfo = Flutter;
+		};
+		FEB00A24AD70EF7AF3FB9935785973A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A45E503409C9530E1F5D12C293F4BD67;
+			remoteInfo = permission_handler_apple;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0113FB6F9DE6AD1737BA583FD315C0AC /* permission_handler_apple-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "permission_handler_apple-prefix.pch"; sourceTree = "<group>"; };
+		044AFD5272B85A5CAAC87039FF683DF7 /* SignatureRunnerError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SignatureRunnerError.swift; path = tensorflow/lite/swift/Sources/SignatureRunnerError.swift; sourceTree = "<group>"; };
+		04C99BAD29047DB9904BA0F619AD4D5A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = "../../../../../../../../.pub-cache/hosted/pub.dev/tflite_flutter-0.11.0/LICENSE"; sourceTree = "<group>"; };
+		05C9B888D0A063DAF73556C3C9D22956 /* PermissionStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PermissionStrategy.h; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/PermissionStrategy.h"; sourceTree = "<group>"; };
+		06D5C8EF973889CC6A214873AE580268 /* PhonePermissionStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PhonePermissionStrategy.h; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/PhonePermissionStrategy.h"; sourceTree = "<group>"; };
+		08772359CDABCB6CA702E5F4A785C498 /* SensorPermissionStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SensorPermissionStrategy.m; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/SensorPermissionStrategy.m"; sourceTree = "<group>"; };
+		097DDFCF154A11F24265AD302951086D /* permission_handler_apple-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "permission_handler_apple-Info.plist"; sourceTree = "<group>"; };
+		0D351F23C38290B0C3B49DC7310E8B45 /* Pods-Runner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Runner.modulemap"; sourceTree = "<group>"; };
+		0D8F6D97B52AAEDF8926C67052CF44C4 /* TensorFlowLiteCMetal.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = TensorFlowLiteCMetal.xcframework; path = Frameworks/TensorFlowLiteCMetal.xcframework; sourceTree = "<group>"; };
+		1281ECDFD8F64134B4BE456827858476 /* CameraPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CameraPlugin.h; path = "../../../../../../../../../../../../../.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/ios/camera_avfoundation/Sources/camera_avfoundation/include/camera_avfoundation/CameraPlugin.h"; sourceTree = "<group>"; };
+		15E6BAE41CEF40114B0032153F0A8699 /* TensorFlowLiteC-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "TensorFlowLiteC-xcframeworks.sh"; sourceTree = "<group>"; };
+		16754451CC068C973247E72B5EACF78C /* Pods-Runner-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Runner-Info.plist"; sourceTree = "<group>"; };
+		17006B4B9FD1B80AF66407355B44D252 /* PermissionHandlerPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PermissionHandlerPlugin.h; path = "../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/PermissionHandlerPlugin.h"; sourceTree = "<group>"; };
+		187549ADDB4BA2E618D80000F41FA81B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = "../../../../../../../../.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/LICENSE"; sourceTree = "<group>"; };
+		192434045658903A36760413A048C6F1 /* PhotoPermissionStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PhotoPermissionStrategy.m; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/PhotoPermissionStrategy.m"; sourceTree = "<group>"; };
+		1A3538A2340E7DC070F3C0084156997B /* AppTrackingTransparencyPermissionStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AppTrackingTransparencyPermissionStrategy.m; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/AppTrackingTransparencyPermissionStrategy.m"; sourceTree = "<group>"; };
+		1A6DA873977397F98CACFD232CD2AC7B /* PermissionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PermissionManager.h; path = "../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/PermissionManager.h"; sourceTree = "<group>"; };
+		1ADB61306F50F60E65BED44878011822 /* Pods-RunnerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RunnerTests.release.xcconfig"; sourceTree = "<group>"; };
+		1B96F4B768D61A15FC3D0FE937F61AFB /* NotificationPermissionStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NotificationPermissionStrategy.m; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/NotificationPermissionStrategy.m"; sourceTree = "<group>"; };
+		1FC96341216BBB5BBE3744FB1F35DEEE /* Pods-RunnerTests.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RunnerTests.profile.xcconfig"; sourceTree = "<group>"; };
+		23B71C979BF5B4405B8626A39841C8F1 /* TensorFlowLiteC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TensorFlowLiteC.release.xcconfig; sourceTree = "<group>"; };
+		24AF43D98EB5B408CB3410EFCC0547C4 /* camera_avfoundation.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = camera_avfoundation.podspec; path = "../../../../../../../../.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/ios/camera_avfoundation.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		26FE648D88C8F4B460F8244831D5A1A5 /* Codec.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Codec.m; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/util/Codec.m"; sourceTree = "<group>"; };
+		283DF676550D13FA341666C4822156F5 /* CameraPermissionUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CameraPermissionUtils.h; path = "../../../../../../../../../../../../../.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/ios/camera_avfoundation/Sources/camera_avfoundation/include/camera_avfoundation/CameraPermissionUtils.h"; sourceTree = "<group>"; };
+		2B3AF9D90D4B088422687FFF4641CBC3 /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
+		2BE8B2683ADE267E83F63D4CA93E5C80 /* ResourceBundle-camera_avfoundation_privacy-camera_avfoundation-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-camera_avfoundation_privacy-camera_avfoundation-Info.plist"; sourceTree = "<group>"; };
+		2CB04EB554430E41E5A19EDE6D62C9F2 /* Pods-RunnerTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RunnerTests-umbrella.h"; sourceTree = "<group>"; };
+		2DFF8E0070C624A15D48C60EFE70948B /* BackgroundRefreshStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BackgroundRefreshStrategy.m; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/BackgroundRefreshStrategy.m"; sourceTree = "<group>"; };
+		2EE698DE54290A60A095C59732D58F76 /* tflite_flutter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = tflite_flutter.debug.xcconfig; sourceTree = "<group>"; };
+		2F0908B8A5026151E2800777E4B17F20 /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
+		303067E77049E3CBAF0FEBEF55C22693 /* camera_avfoundation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = camera_avfoundation.modulemap; sourceTree = "<group>"; };
+		30EFD756CD8577AA429F9FB7287A3A70 /* QueueUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QueueUtils.h; path = "../../../../../../../../../../../../../.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/ios/camera_avfoundation/Sources/camera_avfoundation/include/camera_avfoundation/QueueUtils.h"; sourceTree = "<group>"; };
+		32F8EAC1392759822E469B99CC1BFB7A /* FLTCamMediaSettingsAVWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLTCamMediaSettingsAVWrapper.m; path = "../../../../../../../../../../../.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/ios/camera_avfoundation/Sources/camera_avfoundation/FLTCamMediaSettingsAVWrapper.m"; sourceTree = "<group>"; };
+		35428F75C12FB8FE19E57B10E9714632 /* camera_avfoundation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "camera_avfoundation-umbrella.h"; path = "../../../../../../../../../../../../.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/ios/camera_avfoundation/Sources/camera_avfoundation/include/camera_avfoundation-umbrella.h"; sourceTree = "<group>"; };
+		39470CD68B233703B17D0BAD111129BC /* Interpreter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Interpreter.swift; path = tensorflow/lite/swift/Sources/Interpreter.swift; sourceTree = "<group>"; };
+		3AB196DE28BD4E40C22687B826B8739E /* TensorFlowLiteSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TensorFlowLiteSwift.modulemap; sourceTree = "<group>"; };
+		3CDF279F015AFADBCCA9D5DA22CCB086 /* tflite_flutter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = tflite_flutter.podspec; path = "../../../../../../../../.pub-cache/hosted/pub.dev/tflite_flutter-0.11.0/ios/tflite_flutter.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3E249AAAE8E92B5750DB3E8ADB534D8F /* Pods-RunnerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RunnerTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		3EDAD7CB99F968AE4DA587C921EFEF1E /* BackgroundRefreshStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackgroundRefreshStrategy.h; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/BackgroundRefreshStrategy.h"; sourceTree = "<group>"; };
+		4342E4D6CC739E919417CF0F2AC890E1 /* TensorFlowLiteSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TensorFlowLiteSwift-dummy.m"; sourceTree = "<group>"; };
+		43AF3494A06EFCD9A5F031C0081301B0 /* camera_avfoundation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "camera_avfoundation-prefix.pch"; sourceTree = "<group>"; };
+		43C1394B2A4D7E26B2202A544CB4B99D /* messages.g.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = messages.g.m; path = "../../../../../../../../../../../.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/ios/camera_avfoundation/Sources/camera_avfoundation/messages.g.m"; sourceTree = "<group>"; };
+		4595CFEA2D78A22B8EF340A589E5E7D8 /* Codec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Codec.h; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/util/Codec.h"; sourceTree = "<group>"; };
+		45E120F4A9F7D13802BA4D4E76E24EFC /* Pods-Runner-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Runner-acknowledgements.plist"; sourceTree = "<group>"; };
+		4683C6A6BA60720F17CAD71C28988BDC /* permission_handler_apple-permission_handler_apple_privacy */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "permission_handler_apple-permission_handler_apple_privacy"; path = permission_handler_apple_privacy.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		46CDC06E8B10F583D6D0475385EB3D6B /* Flutter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Flutter.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		49B02BC6880B058B423176A5FF7DB8C3 /* PermissionHandlerEnums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PermissionHandlerEnums.h; path = "../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/PermissionHandlerEnums.h"; sourceTree = "<group>"; };
+		4BAB8078A81735E3F592621E43C46931 /* TensorFlowLite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TensorFlowLite.swift; path = tensorflow/lite/swift/Sources/TensorFlowLite.swift; sourceTree = "<group>"; };
+		4CB131F3BC1D6D2C79680B59CF30EF6B /* Pods-Runner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Runner-dummy.m"; sourceTree = "<group>"; };
+		4F232A611E60237592CF277662F61835 /* CameraProperties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CameraProperties.m; path = "../../../../../../../../../../../.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/ios/camera_avfoundation/Sources/camera_avfoundation/CameraProperties.m"; sourceTree = "<group>"; };
+		4FDC108954D602C70B3C7CB81DE1C7AC /* PermissionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PermissionManager.m; path = "../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/PermissionManager.m"; sourceTree = "<group>"; };
+		543E2C17E1739E069E231E89844AA60B /* PhonePermissionStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PhonePermissionStrategy.m; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/PhonePermissionStrategy.m"; sourceTree = "<group>"; };
+		587F324D6CD4CFD109AD544AA7FBEC07 /* CoreMLDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreMLDelegate.swift; path = tensorflow/lite/swift/Sources/CoreMLDelegate.swift; sourceTree = "<group>"; };
+		59310283B9662A72E7091E1BEE67A41B /* CameraPlugin_Test.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CameraPlugin_Test.h; path = "../../../../../../../../../../../../../.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/ios/camera_avfoundation/Sources/camera_avfoundation/include/camera_avfoundation/CameraPlugin_Test.h"; sourceTree = "<group>"; };
+		5B701A4B25543C4B387464889EECE268 /* TensorFlowLiteSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TensorFlowLiteSwift-Info.plist"; sourceTree = "<group>"; };
+		5B773AFB988EBF1815014E3F16266884 /* TensorFlowLiteC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TensorFlowLiteC.debug.xcconfig; sourceTree = "<group>"; };
+		5D076E3F4D9CCB571BA3D22BF82B1E50 /* AppTrackingTransparencyPermissionStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AppTrackingTransparencyPermissionStrategy.h; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/AppTrackingTransparencyPermissionStrategy.h"; sourceTree = "<group>"; };
+		603E093CBC3E6AA2363409F3CC7EB159 /* permission_handler_apple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = permission_handler_apple.debug.xcconfig; sourceTree = "<group>"; };
+		64E07132B4B8BD26314BFED77733F0F2 /* TensorFlowLiteSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TensorFlowLiteSwift.debug.xcconfig; sourceTree = "<group>"; };
+		669E8F25E1897672BDB80B7EB784DA24 /* Pods-Runner */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Runner"; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		682F91207DB5B92B0A335A10BC1DD948 /* Model.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Model.swift; path = tensorflow/lite/swift/Sources/Model.swift; sourceTree = "<group>"; };
+		689F77421C665EE3988763FA89E0B257 /* camera_avfoundation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = camera_avfoundation.debug.xcconfig; sourceTree = "<group>"; };
+		693633C1A86B1926F66F2F020D76FD39 /* UnknownPermissionStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UnknownPermissionStrategy.h; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/UnknownPermissionStrategy.h"; sourceTree = "<group>"; };
+		6C3345B1B3CAEDF5B03B1F731FDC492E /* Pods-RunnerTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-RunnerTests"; path = Pods_RunnerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CE79ACCB1AED2837B5F37F0C237634E /* Delegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Delegate.swift; path = tensorflow/lite/swift/Sources/Delegate.swift; sourceTree = "<group>"; };
+		6E921704116BCAAA152CED22FAA92660 /* FLTCam_Test.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLTCam_Test.h; path = "../../../../../../../../../../../../../.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/ios/camera_avfoundation/Sources/camera_avfoundation/include/camera_avfoundation/FLTCam_Test.h"; sourceTree = "<group>"; };
+		72072242E07D53CED7022405764A0A8A /* messages.g.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = messages.g.h; path = "../../../../../../../../../../../../../.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/ios/camera_avfoundation/Sources/camera_avfoundation/include/camera_avfoundation/messages.g.h"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		746D10C84BE570697F0F13E901040CFD /* ResourceBundle-permission_handler_apple_privacy-permission_handler_apple-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-permission_handler_apple_privacy-permission_handler_apple-Info.plist"; sourceTree = "<group>"; };
+		747E50173A5DBC2DDB6FE6A7B5E80D80 /* Tensor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Tensor.swift; path = tensorflow/lite/swift/Sources/Tensor.swift; sourceTree = "<group>"; };
+		75D2C546AAFF469BA69DCD36CB6E1B5B /* CameraProperties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CameraProperties.h; path = "../../../../../../../../../../../../../.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/ios/camera_avfoundation/Sources/camera_avfoundation/include/camera_avfoundation/CameraProperties.h"; sourceTree = "<group>"; };
+		781321E58C28B062EBD06ECA376DF160 /* CameraPlugin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CameraPlugin.m; path = "../../../../../../../../../../../.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/ios/camera_avfoundation/Sources/camera_avfoundation/CameraPlugin.m"; sourceTree = "<group>"; };
+		784B7A48E746AC16E259D1D5C4E59A54 /* FLTSavePhotoDelegate_Test.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLTSavePhotoDelegate_Test.h; path = "../../../../../../../../../../../../../.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/ios/camera_avfoundation/Sources/camera_avfoundation/include/camera_avfoundation/FLTSavePhotoDelegate_Test.h"; sourceTree = "<group>"; };
+		78C2FD2643907166C34685A2A79ACB6C /* TensorFlowLiteSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TensorFlowLiteSwift-prefix.pch"; sourceTree = "<group>"; };
+		7A8164888785861C8A02C79675FBE777 /* AssistantPermissionStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AssistantPermissionStrategy.m; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/AssistantPermissionStrategy.m"; sourceTree = "<group>"; };
+		7EBE2FD27755CBA348AA6A154C0B0E6A /* SpeechPermissionStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SpeechPermissionStrategy.h; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/SpeechPermissionStrategy.h"; sourceTree = "<group>"; };
+		7FA1EE3150AB7E2D7A76E646E7CA6C1E /* Pods-Runner-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Runner-resources.sh"; sourceTree = "<group>"; };
+		800B51CFFB384192C557ABB6C243A9FF /* permission_handler_apple-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "permission_handler_apple-umbrella.h"; sourceTree = "<group>"; };
+		813462990F87087E584CC3EA4C52BC6F /* FLTThreadSafeEventChannel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLTThreadSafeEventChannel.h; path = "../../../../../../../../../../../../../.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/ios/camera_avfoundation/Sources/camera_avfoundation/include/camera_avfoundation/FLTThreadSafeEventChannel.h"; sourceTree = "<group>"; };
+		817671F15D4B947F617BD4EE8ACFC278 /* Pods-RunnerTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RunnerTests-Info.plist"; sourceTree = "<group>"; };
+		854F5807BB4721E884942BACFC053DB9 /* permission_handler_apple-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "permission_handler_apple-dummy.m"; sourceTree = "<group>"; };
+		8758A56177F57A2EE30894AA6F81B31A /* Pods-RunnerTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RunnerTests-dummy.m"; sourceTree = "<group>"; };
+		892391A3157936AD4ADD124E3ECE2E82 /* QueueUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QueueUtils.m; path = "../../../../../../../../../../../.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/ios/camera_avfoundation/Sources/camera_avfoundation/QueueUtils.m"; sourceTree = "<group>"; };
+		8A432929F7E93D3E1AA06A4A8668C699 /* Pods-RunnerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RunnerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8CAB548F91B41B28B2E631A2A4133563 /* AudioVideoPermissionStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AudioVideoPermissionStrategy.m; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/AudioVideoPermissionStrategy.m"; sourceTree = "<group>"; };
+		8E43FC828733941E3DB01D6847008216 /* TensorFlowLiteC.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = TensorFlowLiteC.xcframework; path = Frameworks/TensorFlowLiteC.xcframework; sourceTree = "<group>"; };
+		913F3DEAF8ED7EE5BCCAED29E6E08D60 /* permission_handler_apple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = permission_handler_apple.release.xcconfig; sourceTree = "<group>"; };
+		91811B857C44781F5394E94F6B17E5A2 /* FLTSavePhotoDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLTSavePhotoDelegate.m; path = "../../../../../../../../../../../.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/ios/camera_avfoundation/Sources/camera_avfoundation/FLTSavePhotoDelegate.m"; sourceTree = "<group>"; };
+		91DF71CF5C26179A4503DDC1B9350CC2 /* CameraPermissionUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CameraPermissionUtils.m; path = "../../../../../../../../../../../.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/ios/camera_avfoundation/Sources/camera_avfoundation/CameraPermissionUtils.m"; sourceTree = "<group>"; };
+		92BE36E3B0029B20E51FAFD956CAD055 /* MediaLibraryPermissionStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MediaLibraryPermissionStrategy.m; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/MediaLibraryPermissionStrategy.m"; sourceTree = "<group>"; };
+		9925E78146C76A9A9F386091241D0A4D /* camera_avfoundation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = camera_avfoundation.release.xcconfig; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DB2C3B14F6841276B32CA318268B7E5 /* TensorFlowLiteSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TensorFlowLiteSwift-umbrella.h"; sourceTree = "<group>"; };
+		9FA028F6B0870BF91A1B991092E8D370 /* PhotoPermissionStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PhotoPermissionStrategy.h; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/PhotoPermissionStrategy.h"; sourceTree = "<group>"; };
+		A34B3712308AA5A9D809A1CF5430B6AD /* FLTCamMediaSettingsAVWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLTCamMediaSettingsAVWrapper.h; path = "../../../../../../../../../../../../../.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/ios/camera_avfoundation/Sources/camera_avfoundation/include/camera_avfoundation/FLTCamMediaSettingsAVWrapper.h"; sourceTree = "<group>"; };
+		A3917A05F1500107558981DED4CB89EC /* LocationPermissionStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LocationPermissionStrategy.m; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/LocationPermissionStrategy.m"; sourceTree = "<group>"; };
+		A7865733BEC4B7F48D12DC0CB7A9D6F7 /* EventPermissionStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EventPermissionStrategy.m; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/EventPermissionStrategy.m"; sourceTree = "<group>"; };
+		A79B0C5509305686BFB5BB08D825B332 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = "../../../../../../../../../../../../.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/ios/camera_avfoundation/Sources/camera_avfoundation/Resources/PrivacyInfo.xcprivacy"; sourceTree = "<group>"; };
+		A8FDBAA5DB30273D3A49EC23FF64001E /* Pods-Runner-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Runner-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AA3ADB02F76F79C962BF8F2413673B57 /* UnknownPermissionStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UnknownPermissionStrategy.m; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/UnknownPermissionStrategy.m"; sourceTree = "<group>"; };
+		AA465A90AD60EA10D823C315F24118FF /* LocationPermissionStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LocationPermissionStrategy.h; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/LocationPermissionStrategy.h"; sourceTree = "<group>"; };
+		AAC92EA535F6601E1FB12855A9D08396 /* FLTCam.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLTCam.h; path = "../../../../../../../../../../../../../.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/ios/camera_avfoundation/Sources/camera_avfoundation/include/camera_avfoundation/FLTCam.h"; sourceTree = "<group>"; };
+		ACE4EDEA1E8FC02720602AC63DCD4BFE /* CameraPlugin.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = CameraPlugin.modulemap; path = "../../../../../../../../.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/ios/camera_avfoundation/Sources/camera_avfoundation/include/CameraPlugin.modulemap"; sourceTree = "<group>"; };
+		AD23E40CD48FC8E37DB61F915EBE813E /* camera_avfoundation */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = camera_avfoundation; path = camera_avfoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3A623B8951D5371DF81956D45A2ABD8 /* permission_handler_apple.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = permission_handler_apple.modulemap; sourceTree = "<group>"; };
+		B3C9753A7E2083A2CC84D93790A0650A /* camera_avfoundation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "camera_avfoundation-dummy.m"; sourceTree = "<group>"; };
+		B4CDBCB2345AD34EE1C325F8D422BFA6 /* QuantizationParameters.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuantizationParameters.swift; path = tensorflow/lite/swift/Sources/QuantizationParameters.swift; sourceTree = "<group>"; };
+		B55246F181DD02C299D72318761E3FF5 /* EventPermissionStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EventPermissionStrategy.h; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/EventPermissionStrategy.h"; sourceTree = "<group>"; };
+		B71FDE635E0DAB8A1C4CF2FD59DEF34E /* FLTThreadSafeEventChannel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLTThreadSafeEventChannel.m; path = "../../../../../../../../../../../.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/ios/camera_avfoundation/Sources/camera_avfoundation/FLTThreadSafeEventChannel.m"; sourceTree = "<group>"; };
+		BCC84BDE7260B712B097666E169A193C /* Pods-Runner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Runner-umbrella.h"; sourceTree = "<group>"; };
+		C0F32469978C80A92052C135A285634F /* CriticalAlertsPermissionStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CriticalAlertsPermissionStrategy.h; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/CriticalAlertsPermissionStrategy.h"; sourceTree = "<group>"; };
+		C2B3577BB57AAC9EECF92245D164DBFD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = "../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/LICENSE"; sourceTree = "<group>"; };
+		C4CC932CB1DE309FF899FC83625B3EA7 /* TensorFlowLiteCCoreML.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = TensorFlowLiteCCoreML.xcframework; path = Frameworks/TensorFlowLiteCCoreML.xcframework; sourceTree = "<group>"; };
+		C4DB0AAC946B23B66BE22DA67064355D /* StoragePermissionStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = StoragePermissionStrategy.h; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/StoragePermissionStrategy.h"; sourceTree = "<group>"; };
+		C7AD28D5FB25A8DEDF61F78996932FA6 /* permission_handler_apple */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = permission_handler_apple; path = permission_handler_apple.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA7F9F98B09395C1092878803B28C10F /* Flutter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Flutter.release.xcconfig; sourceTree = "<group>"; };
+		CDE99486397B5E47220922297E3DDC30 /* NotificationPermissionStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NotificationPermissionStrategy.h; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/NotificationPermissionStrategy.h"; sourceTree = "<group>"; };
+		CFA56F7544C7A03823E1D2D749934BFC /* Pods-Runner-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Runner-frameworks.sh"; sourceTree = "<group>"; };
+		D2E2D722E1816B55B9C6BB61B1980F8E /* FLTCam.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLTCam.m; path = "../../../../../../../../../../../.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/ios/camera_avfoundation/Sources/camera_avfoundation/FLTCam.m"; sourceTree = "<group>"; };
+		D3BF704301FF1E45A0CB21687F8CF99D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = "../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Resources/PrivacyInfo.xcprivacy"; sourceTree = "<group>"; };
+		D3F9D858ABBD823B99FAF2BA4E83678E /* SignatureRunner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SignatureRunner.swift; path = tensorflow/lite/swift/Sources/SignatureRunner.swift; sourceTree = "<group>"; };
+		D40E0D3564380D443625FDCBCBF4569F /* BluetoothPermissionStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BluetoothPermissionStrategy.m; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/BluetoothPermissionStrategy.m"; sourceTree = "<group>"; };
+		D56068C1645F9DDD67DF20CCA587B06C /* BluetoothPermissionStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BluetoothPermissionStrategy.h; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/BluetoothPermissionStrategy.h"; sourceTree = "<group>"; };
+		D751CAAAA3FAF114EAAA2E8B3A0D84AE /* ContactPermissionStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ContactPermissionStrategy.m; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/ContactPermissionStrategy.m"; sourceTree = "<group>"; };
+		D764B29603A9C099556F137336362185 /* MediaLibraryPermissionStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MediaLibraryPermissionStrategy.h; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/MediaLibraryPermissionStrategy.h"; sourceTree = "<group>"; };
+		D7B0617D0E6EA44C9ABAB1567DF28E7D /* TensorFlowLiteSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TensorFlowLiteSwift.release.xcconfig; sourceTree = "<group>"; };
+		D7B9BCA7EE356C04AE053DCAEC668AE7 /* Flutter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Flutter.debug.xcconfig; sourceTree = "<group>"; };
+		DA3AEAEBDF93661AFA810EB2A2682934 /* AudioVideoPermissionStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AudioVideoPermissionStrategy.h; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/AudioVideoPermissionStrategy.h"; sourceTree = "<group>"; };
+		DCD2FD352565BE929504AB33EAAA4B65 /* InterpreterError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InterpreterError.swift; path = tensorflow/lite/swift/Sources/InterpreterError.swift; sourceTree = "<group>"; };
+		DD8C8ACC853AF1B657D17AEC50E540A9 /* Pods-RunnerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RunnerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DFF6B03CF38A82EB3DD6838438EE3073 /* permission_handler_apple.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = permission_handler_apple.podspec; path = "../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/permission_handler_apple.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E0B71FE13AA6B05010059EB4B8D87919 /* TensorFlowLiteSwift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TensorFlowLiteSwift; path = TensorFlowLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4E0D8308DEA3975A5375601271CA330 /* AssistantPermissionStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AssistantPermissionStrategy.h; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/AssistantPermissionStrategy.h"; sourceTree = "<group>"; };
+		E58D735DD82BB4E8C0F6FD656DC0E0DE /* PermissionHandlerPlugin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PermissionHandlerPlugin.m; path = "../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/PermissionHandlerPlugin.m"; sourceTree = "<group>"; };
+		E64FC2B0CBAE2B2D1A18F8031051C622 /* FLTSavePhotoDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLTSavePhotoDelegate.h; path = "../../../../../../../../../../../../../.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/ios/camera_avfoundation/Sources/camera_avfoundation/include/camera_avfoundation/FLTSavePhotoDelegate.h"; sourceTree = "<group>"; };
+		E8965A284EDFC37A52C7F448737BF487 /* MetalDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MetalDelegate.swift; path = tensorflow/lite/swift/Sources/MetalDelegate.swift; sourceTree = "<group>"; };
+		E9C5F640AD2476216F4F542B0AF5E13C /* Pods-RunnerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RunnerTests.modulemap"; sourceTree = "<group>"; };
+		ED29329F14A4E417288DFF3C633C6407 /* SensorPermissionStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SensorPermissionStrategy.h; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/SensorPermissionStrategy.h"; sourceTree = "<group>"; };
+		EE6B96ECC61A60060994BE564711AB51 /* camera_avfoundation-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "camera_avfoundation-Info.plist"; sourceTree = "<group>"; };
+		F42CDD574886536724FCF0026DD48C6E /* CriticalAlertsPermissionStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CriticalAlertsPermissionStrategy.m; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/CriticalAlertsPermissionStrategy.m"; sourceTree = "<group>"; };
+		F72E27615FA48B1EAADB9F584841A446 /* ContactPermissionStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ContactPermissionStrategy.h; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/ContactPermissionStrategy.h"; sourceTree = "<group>"; };
+		F8547457089967DAC30C3130D4EDF7D1 /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
+		F98E22378D717282AC5FEBD48292E0CC /* camera_avfoundation-camera_avfoundation_privacy */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "camera_avfoundation-camera_avfoundation_privacy"; path = camera_avfoundation_privacy.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB3908DECD6B1CD38628139157C310E4 /* SpeechPermissionStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SpeechPermissionStrategy.m; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/SpeechPermissionStrategy.m"; sourceTree = "<group>"; };
+		FCF969F1EF2E707170515B4B5E75307A /* StoragePermissionStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = StoragePermissionStrategy.m; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/StoragePermissionStrategy.m"; sourceTree = "<group>"; };
+		FD84068DA2A66310702873AA249BAB2E /* tflite_flutter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = tflite_flutter.release.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		134606AD9D08CA419A956ED946CBCDD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		195B28298C85805794E9556F7EA07882 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2401C748AE4FF4DEE2BCD2FE45495109 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A3FA85BD3522B43DFB2916D78592B4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51988BAA70534E2EBDD5835141EC33AB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DF915DB0F3EA19ED771DF4016AB2851 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61B0E49AAD8147326F41A00E293FD626 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C24FE15DE83CAB156D5FE3CF72366C4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				258D55120579536CC6F57F97BBA5F882 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5D2BFC71FE8FEA2100A0575640DC57B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15A57018FE4E6509BC912279A8000A59 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D748DE11BD9DBC0E83FD8E4E696C5729 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		010C52AEDA4D086277127BB5CDE4E905 /* tflite_flutter */ = {
+			isa = PBXGroup;
+			children = (
+				1E6B99CC9B0C9C66AD0CDBBF1A33CC55 /* Pod */,
+				A8677F3EE322997788B3D6F23B1F9FDF /* Support Files */,
+			);
+			name = tflite_flutter;
+			path = ../.symlinks/plugins/tflite_flutter/ios;
+			sourceTree = "<group>";
+		};
+		02E9DEB0F74E2664E8740B98363991D0 /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				B56BACED38E4263177B9D5E5F63B1E6E /* .. */,
+			);
+			name = ..;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0300AAFB13E6AA45BE640E4922CBFCFB /* plugins */ = {
+			isa = PBXGroup;
+			children = (
+				E6EEFAEA9FB3609E059CAE1AC7E2FF7F /* camera_avfoundation */,
+			);
+			name = plugins;
+			path = plugins;
+			sourceTree = "<group>";
+		};
+		0558FCE6D61E9B3DACCC9DAD8E09BDCC /* CoreML */ = {
+			isa = PBXGroup;
+			children = (
+				4562E3CEF833C9EF1D15219E8F979846 /* Frameworks */,
+			);
+			name = CoreML;
+			sourceTree = "<group>";
+		};
+		057F1589B170AC43161343211BCDD497 /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				31E1E84EDB5123E6CE13DBE7C86391B9 /* Documents */,
+			);
+			name = ..;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		071E819D2EE625CC28327D9C412FB155 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ADC5FFC84F69A20C2C6AE63D94718475 /* TensorFlowLiteC */,
+				8537351C65D0EA9C7430E80C346919DA /* TensorFlowLiteSwift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		07F7F896C96A8FA8064798519C73C9EF /* .symlinks */ = {
+			isa = PBXGroup;
+			children = (
+				0300AAFB13E6AA45BE640E4922CBFCFB /* plugins */,
+			);
+			name = .symlinks;
+			path = .symlinks;
+			sourceTree = "<group>";
+		};
+		0DD4E648172AF9D54092C6735556FDC3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				15E6BAE41CEF40114B0032153F0A8699 /* TensorFlowLiteC-xcframeworks.sh */,
+				5B773AFB988EBF1815014E3F16266884 /* TensorFlowLiteC.debug.xcconfig */,
+				23B71C979BF5B4405B8626A39841C8F1 /* TensorFlowLiteC.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TensorFlowLiteC";
+			sourceTree = "<group>";
+		};
+		10E42E675017DAAB6E1217FA86F237D6 /* .symlinks */ = {
+			isa = PBXGroup;
+			children = (
+				95A73DA5FEC65D74A0704B4DF6F29BDD /* plugins */,
+			);
+			name = .symlinks;
+			path = .symlinks;
+			sourceTree = "<group>";
+		};
+		125DA93668BA2A9B6846833C85E842BA /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				991329B73253B663E09729ECDBD5BEDD /* .. */,
+			);
+			name = ..;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		12CA332B4B9973A991194D4966E6DF24 /* camera_avfoundation */ = {
+			isa = PBXGroup;
+			children = (
+				8A6B0928022BA9EEDC532E2B3B13D6B9 /* Sources */,
+			);
+			name = camera_avfoundation;
+			path = camera_avfoundation;
+			sourceTree = "<group>";
+		};
+		154DAC63E7DE2BEEC8DA24103A9F9874 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				07F7F896C96A8FA8064798519C73C9EF /* .symlinks */,
+			);
+			name = ios;
+			path = ios;
+			sourceTree = "<group>";
+		};
+		165600E57296EE3A35BD034A5E5A598E /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				BD4D82DF44F1927B21F8C80EDF55CF24 /* GitHub */,
+			);
+			name = Documents;
+			path = Documents;
+			sourceTree = "<group>";
+		};
+		19836A2260CFB0D7B5C456C8C0F6ECF1 /* coin_detector */ = {
+			isa = PBXGroup;
+			children = (
+				154DAC63E7DE2BEEC8DA24103A9F9874 /* ios */,
+			);
+			name = coin_detector;
+			path = coin_detector;
+			sourceTree = "<group>";
+		};
+		1E6B99CC9B0C9C66AD0CDBBF1A33CC55 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				04C99BAD29047DB9904BA0F619AD4D5A /* LICENSE */,
+				3CDF279F015AFADBCCA9D5DA22CCB086 /* tflite_flutter.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		1FCBF924C6D80402FE96FC8066CFC11C /* camera_avfoundation */ = {
+			isa = PBXGroup;
+			children = (
+				91DF71CF5C26179A4503DDC1B9350CC2 /* CameraPermissionUtils.m */,
+				781321E58C28B062EBD06ECA376DF160 /* CameraPlugin.m */,
+				4F232A611E60237592CF277662F61835 /* CameraProperties.m */,
+				D2E2D722E1816B55B9C6BB61B1980F8E /* FLTCam.m */,
+				32F8EAC1392759822E469B99CC1BFB7A /* FLTCamMediaSettingsAVWrapper.m */,
+				91811B857C44781F5394E94F6B17E5A2 /* FLTSavePhotoDelegate.m */,
+				B71FDE635E0DAB8A1C4CF2FD59DEF34E /* FLTThreadSafeEventChannel.m */,
+				43C1394B2A4D7E26B2202A544CB4B99D /* messages.g.m */,
+				892391A3157936AD4ADD124E3ECE2E82 /* QueueUtils.m */,
+				C623319D29CD4E27DB341C081EC4282B /* include */,
+			);
+			name = camera_avfoundation;
+			path = camera_avfoundation;
+			sourceTree = "<group>";
+		};
+		20636934091401CBB21CB77E629AF4C6 /* Pods-RunnerTests */ = {
+			isa = PBXGroup;
+			children = (
+				E9C5F640AD2476216F4F542B0AF5E13C /* Pods-RunnerTests.modulemap */,
+				8A432929F7E93D3E1AA06A4A8668C699 /* Pods-RunnerTests-acknowledgements.markdown */,
+				3E249AAAE8E92B5750DB3E8ADB534D8F /* Pods-RunnerTests-acknowledgements.plist */,
+				8758A56177F57A2EE30894AA6F81B31A /* Pods-RunnerTests-dummy.m */,
+				817671F15D4B947F617BD4EE8ACFC278 /* Pods-RunnerTests-Info.plist */,
+				2CB04EB554430E41E5A19EDE6D62C9F2 /* Pods-RunnerTests-umbrella.h */,
+				DD8C8ACC853AF1B657D17AEC50E540A9 /* Pods-RunnerTests.debug.xcconfig */,
+				1FC96341216BBB5BBE3744FB1F35DEEE /* Pods-RunnerTests.profile.xcconfig */,
+				1ADB61306F50F60E65BED44878011822 /* Pods-RunnerTests.release.xcconfig */,
+			);
+			name = "Pods-RunnerTests";
+			path = "Target Support Files/Pods-RunnerTests";
+			sourceTree = "<group>";
+		};
+		21B753C4F1C0C9CB48A2F0B96907697C /* GitHub */ = {
+			isa = PBXGroup;
+			children = (
+				648A6F28BDF7EC61D73DEA5364AFEC51 /* coin_detector */,
+			);
+			name = GitHub;
+			path = GitHub;
+			sourceTree = "<group>";
+		};
+		2C2F6DAC4CF99382A4F9243BC123DFF9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AD23E40CD48FC8E37DB61F915EBE813E /* camera_avfoundation */,
+				F98E22378D717282AC5FEBD48292E0CC /* camera_avfoundation-camera_avfoundation_privacy */,
+				C7AD28D5FB25A8DEDF61F78996932FA6 /* permission_handler_apple */,
+				4683C6A6BA60720F17CAD71C28988BDC /* permission_handler_apple-permission_handler_apple_privacy */,
+				669E8F25E1897672BDB80B7EB784DA24 /* Pods-Runner */,
+				6C3345B1B3CAEDF5B03B1F731FDC492E /* Pods-RunnerTests */,
+				E0B71FE13AA6B05010059EB4B8D87919 /* TensorFlowLiteSwift */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		31E1E84EDB5123E6CE13DBE7C86391B9 /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				8599A4398760E75C757FCAAED1B83C46 /* GitHub */,
+			);
+			name = Documents;
+			path = Documents;
+			sourceTree = "<group>";
+		};
+		33434941BF5B2F85730C0682A0ED6F42 /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+				E8965A284EDFC37A52C7F448737BF487 /* MetalDelegate.swift */,
+			);
+			name = Metal;
+			sourceTree = "<group>";
+		};
+		35C40E723C9B463B32E9C509D955EE47 /* camera_avfoundation */ = {
+			isa = PBXGroup;
+			children = (
+				CF5A007C51570C35CF8355587A9B62F6 /* .. */,
+				D3952EF9783FC73903F09AA20937CC8A /* Pod */,
+				79197E7F08B073FD1B5ABC9D52EA6940 /* Support Files */,
+			);
+			name = camera_avfoundation;
+			path = ../.symlinks/plugins/camera_avfoundation/ios;
+			sourceTree = "<group>";
+		};
+		3D22D3F28FB50A40942B0AFA088DD217 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E43FC828733941E3DB01D6847008216 /* TensorFlowLiteC.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		40860AC97D28E78D4D3FA84FD6430F2C /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				12CA332B4B9973A991194D4966E6DF24 /* camera_avfoundation */,
+			);
+			name = ios;
+			path = ios;
+			sourceTree = "<group>";
+		};
+		4346CEA42942D3CF6DD4008767960794 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FBCC3092181DB5C91852C2ABC60C2964 /* camera_avfoundation */,
+			);
+			name = Sources;
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		43F615EABF71080F5A25AED475E6CA16 /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+				DC5AC8DFDF817D016BF04C38E2F56957 /* Frameworks */,
+			);
+			name = Metal;
+			sourceTree = "<group>";
+		};
+		440CB9153ADEFD35A23533FF070153AB /* CoreML */ = {
+			isa = PBXGroup;
+			children = (
+				587F324D6CD4CFD109AD544AA7FBEC07 /* CoreMLDelegate.swift */,
+			);
+			name = CoreML;
+			sourceTree = "<group>";
+		};
+		4562E3CEF833C9EF1D15219E8F979846 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4CC932CB1DE309FF899FC83625B3EA7 /* TensorFlowLiteCCoreML.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48784BA740BD93553321C337ADC29C92 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F733C06013DDD6E5B5E1694C37DDB5BD /* Pods-Runner */,
+				20636934091401CBB21CB77E629AF4C6 /* Pods-RunnerTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		5119A9D07110BFD8F359C303D70256BD /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				670DE189039D0D5E657E40C86F3130AA /* camera_avfoundation */,
+			);
+			name = ios;
+			path = ios;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5D695209CA600820D9AA694320D37EC7 /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				125DA93668BA2A9B6846833C85E842BA /* .. */,
+			);
+			name = ..;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		5FAB6BFA1954ED07A180DE5D135F3EB4 /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				838ACB912F66DBC981F008D10D6C43F8 /* Documents */,
+			);
+			name = ..;
+			path = .;
+			sourceTree = "<group>";
+		};
+		635881D41E4DC8D310DEF076DC9B8A68 /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				D1396AECFAD098441C6596383BF03A0F /* .. */,
+			);
+			name = ..;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		648A6F28BDF7EC61D73DEA5364AFEC51 /* coin_detector */ = {
+			isa = PBXGroup;
+			children = (
+				8E9A07DEBDF595E17E8FA1767F787C8C /* ios */,
+			);
+			name = coin_detector;
+			path = coin_detector;
+			sourceTree = "<group>";
+		};
+		670DE189039D0D5E657E40C86F3130AA /* camera_avfoundation */ = {
+			isa = PBXGroup;
+			children = (
+				4346CEA42942D3CF6DD4008767960794 /* Sources */,
+			);
+			name = camera_avfoundation;
+			path = camera_avfoundation;
+			sourceTree = "<group>";
+		};
+		6CA58E0E50713B3D1B99A89B6F6D21FC /* plugins */ = {
+			isa = PBXGroup;
+			children = (
+				D225D532FEBA7D3581764E25CB71D0F7 /* camera_avfoundation */,
+			);
+			name = plugins;
+			path = plugins;
+			sourceTree = "<group>";
+		};
+		77F1C998F65D56EBC51D43C6A8E074AD /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				46CDC06E8B10F583D6D0475385EB3D6B /* Flutter.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		78B243FDBA9F41894DB0914CA25A5E38 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				C2B3577BB57AAC9EECF92245D164DBFD /* LICENSE */,
+				DFF6B03CF38A82EB3DD6838438EE3073 /* permission_handler_apple.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		79197E7F08B073FD1B5ABC9D52EA6940 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				303067E77049E3CBAF0FEBEF55C22693 /* camera_avfoundation.modulemap */,
+				B3C9753A7E2083A2CC84D93790A0650A /* camera_avfoundation-dummy.m */,
+				EE6B96ECC61A60060994BE564711AB51 /* camera_avfoundation-Info.plist */,
+				43AF3494A06EFCD9A5F031C0081301B0 /* camera_avfoundation-prefix.pch */,
+				689F77421C665EE3988763FA89E0B257 /* camera_avfoundation.debug.xcconfig */,
+				9925E78146C76A9A9F386091241D0A4D /* camera_avfoundation.release.xcconfig */,
+				2BE8B2683ADE267E83F63D4CA93E5C80 /* ResourceBundle-camera_avfoundation_privacy-camera_avfoundation-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../../../../Pods/Target Support Files/camera_avfoundation";
+			sourceTree = "<group>";
+		};
+		7D5E0A7C625F6FCBAD5DD92C76C7FF89 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3D22D3F28FB50A40942B0AFA088DD217 /* Frameworks */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		7FC5B9A148D98CE458AE69CD6512B68A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3AB196DE28BD4E40C22687B826B8739E /* TensorFlowLiteSwift.modulemap */,
+				4342E4D6CC739E919417CF0F2AC890E1 /* TensorFlowLiteSwift-dummy.m */,
+				5B701A4B25543C4B387464889EECE268 /* TensorFlowLiteSwift-Info.plist */,
+				78C2FD2643907166C34685A2A79ACB6C /* TensorFlowLiteSwift-prefix.pch */,
+				9DB2C3B14F6841276B32CA318268B7E5 /* TensorFlowLiteSwift-umbrella.h */,
+				64E07132B4B8BD26314BFED77733F0F2 /* TensorFlowLiteSwift.debug.xcconfig */,
+				D7B0617D0E6EA44C9ABAB1567DF28E7D /* TensorFlowLiteSwift.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TensorFlowLiteSwift";
+			sourceTree = "<group>";
+		};
+		838ACB912F66DBC981F008D10D6C43F8 /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				21B753C4F1C0C9CB48A2F0B96907697C /* GitHub */,
+			);
+			name = Documents;
+			path = Documents;
+			sourceTree = "<group>";
+		};
+		84A506F3613FD015CA31018B1BC28E9F /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				635881D41E4DC8D310DEF076DC9B8A68 /* .. */,
+			);
+			name = ..;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		8537351C65D0EA9C7430E80C346919DA /* TensorFlowLiteSwift */ = {
+			isa = PBXGroup;
+			children = (
+				C618B79F76F81AF59701855EF0FCA43B /* Core */,
+				440CB9153ADEFD35A23533FF070153AB /* CoreML */,
+				33434941BF5B2F85730C0682A0ED6F42 /* Metal */,
+				7FC5B9A148D98CE458AE69CD6512B68A /* Support Files */,
+			);
+			name = TensorFlowLiteSwift;
+			path = TensorFlowLiteSwift;
+			sourceTree = "<group>";
+		};
+		8599A4398760E75C757FCAAED1B83C46 /* GitHub */ = {
+			isa = PBXGroup;
+			children = (
+				E1A1827C9F8C29F1A8424711E85CB14E /* coin_detector */,
+			);
+			name = GitHub;
+			path = GitHub;
+			sourceTree = "<group>";
+		};
+		8A6B0928022BA9EEDC532E2B3B13D6B9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1FCBF924C6D80402FE96FC8066CFC11C /* camera_avfoundation */,
+			);
+			name = Sources;
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		8E0AC1DFE0F657DCCF81378CA23DE4BF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B3A623B8951D5371DF81956D45A2ABD8 /* permission_handler_apple.modulemap */,
+				854F5807BB4721E884942BACFC053DB9 /* permission_handler_apple-dummy.m */,
+				097DDFCF154A11F24265AD302951086D /* permission_handler_apple-Info.plist */,
+				0113FB6F9DE6AD1737BA583FD315C0AC /* permission_handler_apple-prefix.pch */,
+				800B51CFFB384192C557ABB6C243A9FF /* permission_handler_apple-umbrella.h */,
+				603E093CBC3E6AA2363409F3CC7EB159 /* permission_handler_apple.debug.xcconfig */,
+				913F3DEAF8ED7EE5BCCAED29E6E08D60 /* permission_handler_apple.release.xcconfig */,
+				746D10C84BE570697F0F13E901040CFD /* ResourceBundle-permission_handler_apple_privacy-permission_handler_apple-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../../../../Pods/Target Support Files/permission_handler_apple";
+			sourceTree = "<group>";
+		};
+		8E9A07DEBDF595E17E8FA1767F787C8C /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				B0A8982464F8F814281ADE8726546E9E /* .symlinks */,
+			);
+			name = ios;
+			path = ios;
+			sourceTree = "<group>";
+		};
+		8FCB3F48F94B48D7187EB2D0F7DD7B13 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				A0DEFA93C5F098FAA323909FB9E2D7EE /* Classes */,
+				A2E28D4FC815AE1C570C3F9D2952A30D /* Resources */,
+			);
+			name = ios;
+			path = ios;
+			sourceTree = "<group>";
+		};
+		957931B461AB2507AFD77A966B7F2AE7 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				35C40E723C9B463B32E9C509D955EE47 /* camera_avfoundation */,
+				E8DCF8FE42F5168835FB52ADDB6BB7E8 /* Flutter */,
+				FC623CFF7AC206BC6084DEE1BA9C3187 /* permission_handler_apple */,
+				010C52AEDA4D086277127BB5CDE4E905 /* tflite_flutter */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		95A73DA5FEC65D74A0704B4DF6F29BDD /* plugins */ = {
+			isa = PBXGroup;
+			children = (
+				FC6C1FF0DB5BC8F72626D0BC8584DEB6 /* permission_handler_apple */,
+			);
+			name = plugins;
+			path = plugins;
+			sourceTree = "<group>";
+		};
+		991329B73253B663E09729ECDBD5BEDD /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				EE80B600EB05EC2CEEBFB3580D3B414E /* .. */,
+			);
+			name = ..;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		9DEB659C53569B7798360879BBA63A74 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				10E42E675017DAAB6E1217FA86F237D6 /* .symlinks */,
+			);
+			name = ios;
+			path = ios;
+			sourceTree = "<group>";
+		};
+		A0DEFA93C5F098FAA323909FB9E2D7EE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				49B02BC6880B058B423176A5FF7DB8C3 /* PermissionHandlerEnums.h */,
+				17006B4B9FD1B80AF66407355B44D252 /* PermissionHandlerPlugin.h */,
+				E58D735DD82BB4E8C0F6FD656DC0E0DE /* PermissionHandlerPlugin.m */,
+				1A6DA873977397F98CACFD232CD2AC7B /* PermissionManager.h */,
+				4FDC108954D602C70B3C7CB81DE1C7AC /* PermissionManager.m */,
+				A6711A9B9841B0E47F7ED961D5061610 /* strategies */,
+				AAD4C59BD540AE12BFB818F626BF6DE1 /* util */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A2E28D4FC815AE1C570C3F9D2952A30D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D3BF704301FF1E45A0CB21687F8CF99D /* PrivacyInfo.xcprivacy */,
+			);
+			name = Resources;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A6711A9B9841B0E47F7ED961D5061610 /* strategies */ = {
+			isa = PBXGroup;
+			children = (
+				5D076E3F4D9CCB571BA3D22BF82B1E50 /* AppTrackingTransparencyPermissionStrategy.h */,
+				1A3538A2340E7DC070F3C0084156997B /* AppTrackingTransparencyPermissionStrategy.m */,
+				E4E0D8308DEA3975A5375601271CA330 /* AssistantPermissionStrategy.h */,
+				7A8164888785861C8A02C79675FBE777 /* AssistantPermissionStrategy.m */,
+				DA3AEAEBDF93661AFA810EB2A2682934 /* AudioVideoPermissionStrategy.h */,
+				8CAB548F91B41B28B2E631A2A4133563 /* AudioVideoPermissionStrategy.m */,
+				3EDAD7CB99F968AE4DA587C921EFEF1E /* BackgroundRefreshStrategy.h */,
+				2DFF8E0070C624A15D48C60EFE70948B /* BackgroundRefreshStrategy.m */,
+				D56068C1645F9DDD67DF20CCA587B06C /* BluetoothPermissionStrategy.h */,
+				D40E0D3564380D443625FDCBCBF4569F /* BluetoothPermissionStrategy.m */,
+				F72E27615FA48B1EAADB9F584841A446 /* ContactPermissionStrategy.h */,
+				D751CAAAA3FAF114EAAA2E8B3A0D84AE /* ContactPermissionStrategy.m */,
+				C0F32469978C80A92052C135A285634F /* CriticalAlertsPermissionStrategy.h */,
+				F42CDD574886536724FCF0026DD48C6E /* CriticalAlertsPermissionStrategy.m */,
+				B55246F181DD02C299D72318761E3FF5 /* EventPermissionStrategy.h */,
+				A7865733BEC4B7F48D12DC0CB7A9D6F7 /* EventPermissionStrategy.m */,
+				AA465A90AD60EA10D823C315F24118FF /* LocationPermissionStrategy.h */,
+				A3917A05F1500107558981DED4CB89EC /* LocationPermissionStrategy.m */,
+				D764B29603A9C099556F137336362185 /* MediaLibraryPermissionStrategy.h */,
+				92BE36E3B0029B20E51FAFD956CAD055 /* MediaLibraryPermissionStrategy.m */,
+				CDE99486397B5E47220922297E3DDC30 /* NotificationPermissionStrategy.h */,
+				1B96F4B768D61A15FC3D0FE937F61AFB /* NotificationPermissionStrategy.m */,
+				05C9B888D0A063DAF73556C3C9D22956 /* PermissionStrategy.h */,
+				06D5C8EF973889CC6A214873AE580268 /* PhonePermissionStrategy.h */,
+				543E2C17E1739E069E231E89844AA60B /* PhonePermissionStrategy.m */,
+				9FA028F6B0870BF91A1B991092E8D370 /* PhotoPermissionStrategy.h */,
+				192434045658903A36760413A048C6F1 /* PhotoPermissionStrategy.m */,
+				ED29329F14A4E417288DFF3C633C6407 /* SensorPermissionStrategy.h */,
+				08772359CDABCB6CA702E5F4A785C498 /* SensorPermissionStrategy.m */,
+				7EBE2FD27755CBA348AA6A154C0B0E6A /* SpeechPermissionStrategy.h */,
+				FB3908DECD6B1CD38628139157C310E4 /* SpeechPermissionStrategy.m */,
+				C4DB0AAC946B23B66BE22DA67064355D /* StoragePermissionStrategy.h */,
+				FCF969F1EF2E707170515B4B5E75307A /* StoragePermissionStrategy.m */,
+				693633C1A86B1926F66F2F020D76FD39 /* UnknownPermissionStrategy.h */,
+				AA3ADB02F76F79C962BF8F2413673B57 /* UnknownPermissionStrategy.m */,
+			);
+			name = strategies;
+			path = strategies;
+			sourceTree = "<group>";
+		};
+		A8677F3EE322997788B3D6F23B1F9FDF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2EE698DE54290A60A095C59732D58F76 /* tflite_flutter.debug.xcconfig */,
+				FD84068DA2A66310702873AA249BAB2E /* tflite_flutter.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../../../../Pods/Target Support Files/tflite_flutter";
+			sourceTree = "<group>";
+		};
+		AAD4C59BD540AE12BFB818F626BF6DE1 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				4595CFEA2D78A22B8EF340A589E5E7D8 /* Codec.h */,
+				26FE648D88C8F4B460F8244831D5A1A5 /* Codec.m */,
+			);
+			name = util;
+			path = util;
+			sourceTree = "<group>";
+		};
+		ADC5FFC84F69A20C2C6AE63D94718475 /* TensorFlowLiteC */ = {
+			isa = PBXGroup;
+			children = (
+				7D5E0A7C625F6FCBAD5DD92C76C7FF89 /* Core */,
+				0558FCE6D61E9B3DACCC9DAD8E09BDCC /* CoreML */,
+				43F615EABF71080F5A25AED475E6CA16 /* Metal */,
+				0DD4E648172AF9D54092C6735556FDC3 /* Support Files */,
+			);
+			name = TensorFlowLiteC;
+			path = TensorFlowLiteC;
+			sourceTree = "<group>";
+		};
+		B0A8982464F8F814281ADE8726546E9E /* .symlinks */ = {
+			isa = PBXGroup;
+			children = (
+				6CA58E0E50713B3D1B99A89B6F6D21FC /* plugins */,
+			);
+			name = .symlinks;
+			path = .symlinks;
+			sourceTree = "<group>";
+		};
+		B350C5487D9011714AF0516D5DBA5F4F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A79B0C5509305686BFB5BB08D825B332 /* PrivacyInfo.xcprivacy */,
+			);
+			name = Resources;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B56BACED38E4263177B9D5E5F63B1E6E /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				BEA524F7123A15EB0B7090E6FC011F1D /* .. */,
+			);
+			name = ..;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		B775EDF67A2135EE1A09FA6079996E5B /* camera_avfoundation */ = {
+			isa = PBXGroup;
+			children = (
+				283DF676550D13FA341666C4822156F5 /* CameraPermissionUtils.h */,
+				1281ECDFD8F64134B4BE456827858476 /* CameraPlugin.h */,
+				59310283B9662A72E7091E1BEE67A41B /* CameraPlugin_Test.h */,
+				75D2C546AAFF469BA69DCD36CB6E1B5B /* CameraProperties.h */,
+				AAC92EA535F6601E1FB12855A9D08396 /* FLTCam.h */,
+				6E921704116BCAAA152CED22FAA92660 /* FLTCam_Test.h */,
+				A34B3712308AA5A9D809A1CF5430B6AD /* FLTCamMediaSettingsAVWrapper.h */,
+				E64FC2B0CBAE2B2D1A18F8031051C622 /* FLTSavePhotoDelegate.h */,
+				784B7A48E746AC16E259D1D5C4E59A54 /* FLTSavePhotoDelegate_Test.h */,
+				813462990F87087E584CC3EA4C52BC6F /* FLTThreadSafeEventChannel.h */,
+				72072242E07D53CED7022405764A0A8A /* messages.g.h */,
+				30EFD756CD8577AA429F9FB7287A3A70 /* QueueUtils.h */,
+			);
+			name = camera_avfoundation;
+			path = camera_avfoundation;
+			sourceTree = "<group>";
+		};
+		BD4D82DF44F1927B21F8C80EDF55CF24 /* GitHub */ = {
+			isa = PBXGroup;
+			children = (
+				19836A2260CFB0D7B5C456C8C0F6ECF1 /* coin_detector */,
+			);
+			name = GitHub;
+			path = GitHub;
+			sourceTree = "<group>";
+		};
+		BEA524F7123A15EB0B7090E6FC011F1D /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				DD15C01EEE9652D8BD621B0969AEB329 /* .. */,
+			);
+			name = ..;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		C618B79F76F81AF59701855EF0FCA43B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				6CE79ACCB1AED2837B5F37F0C237634E /* Delegate.swift */,
+				39470CD68B233703B17D0BAD111129BC /* Interpreter.swift */,
+				DCD2FD352565BE929504AB33EAAA4B65 /* InterpreterError.swift */,
+				682F91207DB5B92B0A335A10BC1DD948 /* Model.swift */,
+				B4CDBCB2345AD34EE1C325F8D422BFA6 /* QuantizationParameters.swift */,
+				D3F9D858ABBD823B99FAF2BA4E83678E /* SignatureRunner.swift */,
+				044AFD5272B85A5CAAC87039FF683DF7 /* SignatureRunnerError.swift */,
+				747E50173A5DBC2DDB6FE6A7B5E80D80 /* Tensor.swift */,
+				4BAB8078A81735E3F592621E43C46931 /* TensorFlowLite.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		C623319D29CD4E27DB341C081EC4282B /* include */ = {
+			isa = PBXGroup;
+			children = (
+				35428F75C12FB8FE19E57B10E9714632 /* camera_avfoundation-umbrella.h */,
+				B775EDF67A2135EE1A09FA6079996E5B /* camera_avfoundation */,
+			);
+			name = include;
+			path = include;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				957931B461AB2507AFD77A966B7F2AE7 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				071E819D2EE625CC28327D9C412FB155 /* Pods */,
+				2C2F6DAC4CF99382A4F9243BC123DFF9 /* Products */,
+				48784BA740BD93553321C337ADC29C92 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		CF5A007C51570C35CF8355587A9B62F6 /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				84A506F3613FD015CA31018B1BC28E9F /* .. */,
+			);
+			name = ..;
+			path = "../../../../../../../../.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/ios/camera_avfoundation/Sources";
+			sourceTree = "<group>";
+		};
+		D12DC6F0D9E0BCEB28587983CE5A650A /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				5D695209CA600820D9AA694320D37EC7 /* .. */,
+			);
+			name = ..;
+			path = "../../../../../../../../.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios";
+			sourceTree = "<group>";
+		};
+		D1396AECFAD098441C6596383BF03A0F /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				02E9DEB0F74E2664E8740B98363991D0 /* .. */,
+			);
+			name = ..;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D225D532FEBA7D3581764E25CB71D0F7 /* camera_avfoundation */ = {
+			isa = PBXGroup;
+			children = (
+				5119A9D07110BFD8F359C303D70256BD /* ios */,
+			);
+			name = camera_avfoundation;
+			path = camera_avfoundation;
+			sourceTree = "<group>";
+		};
+		D3952EF9783FC73903F09AA20937CC8A /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				24AF43D98EB5B408CB3410EFCC0547C4 /* camera_avfoundation.podspec */,
+				ACE4EDEA1E8FC02720602AC63DCD4BFE /* CameraPlugin.modulemap */,
+				187549ADDB4BA2E618D80000F41FA81B /* LICENSE */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		DC5AC8DFDF817D016BF04C38E2F56957 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D8F6D97B52AAEDF8926C67052CF44C4 /* TensorFlowLiteCMetal.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD15C01EEE9652D8BD621B0969AEB329 /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				5FAB6BFA1954ED07A180DE5D135F3EB4 /* .. */,
+				165600E57296EE3A35BD034A5E5A598E /* Documents */,
+			);
+			name = ..;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		E1A1827C9F8C29F1A8424711E85CB14E /* coin_detector */ = {
+			isa = PBXGroup;
+			children = (
+				9DEB659C53569B7798360879BBA63A74 /* ios */,
+			);
+			name = coin_detector;
+			path = coin_detector;
+			sourceTree = "<group>";
+		};
+		E50769311AFBEB02E851B669D126C4C4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D7B9BCA7EE356C04AE053DCAEC668AE7 /* Flutter.debug.xcconfig */,
+				CA7F9F98B09395C1092878803B28C10F /* Flutter.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Pods/Target Support Files/Flutter";
+			sourceTree = "<group>";
+		};
+		E6EEFAEA9FB3609E059CAE1AC7E2FF7F /* camera_avfoundation */ = {
+			isa = PBXGroup;
+			children = (
+				40860AC97D28E78D4D3FA84FD6430F2C /* ios */,
+			);
+			name = camera_avfoundation;
+			path = camera_avfoundation;
+			sourceTree = "<group>";
+		};
+		E8DCF8FE42F5168835FB52ADDB6BB7E8 /* Flutter */ = {
+			isa = PBXGroup;
+			children = (
+				77F1C998F65D56EBC51D43C6A8E074AD /* Pod */,
+				E50769311AFBEB02E851B669D126C4C4 /* Support Files */,
+			);
+			name = Flutter;
+			path = ../Flutter;
+			sourceTree = "<group>";
+		};
+		EE80B600EB05EC2CEEBFB3580D3B414E /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				057F1589B170AC43161343211BCDD497 /* .. */,
+			);
+			name = ..;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		F733C06013DDD6E5B5E1694C37DDB5BD /* Pods-Runner */ = {
+			isa = PBXGroup;
+			children = (
+				0D351F23C38290B0C3B49DC7310E8B45 /* Pods-Runner.modulemap */,
+				A8FDBAA5DB30273D3A49EC23FF64001E /* Pods-Runner-acknowledgements.markdown */,
+				45E120F4A9F7D13802BA4D4E76E24EFC /* Pods-Runner-acknowledgements.plist */,
+				4CB131F3BC1D6D2C79680B59CF30EF6B /* Pods-Runner-dummy.m */,
+				CFA56F7544C7A03823E1D2D749934BFC /* Pods-Runner-frameworks.sh */,
+				16754451CC068C973247E72B5EACF78C /* Pods-Runner-Info.plist */,
+				7FA1EE3150AB7E2D7A76E646E7CA6C1E /* Pods-Runner-resources.sh */,
+				BCC84BDE7260B712B097666E169A193C /* Pods-Runner-umbrella.h */,
+				2F0908B8A5026151E2800777E4B17F20 /* Pods-Runner.debug.xcconfig */,
+				2B3AF9D90D4B088422687FFF4641CBC3 /* Pods-Runner.profile.xcconfig */,
+				F8547457089967DAC30C3130D4EDF7D1 /* Pods-Runner.release.xcconfig */,
+			);
+			name = "Pods-Runner";
+			path = "Target Support Files/Pods-Runner";
+			sourceTree = "<group>";
+		};
+		FBCC3092181DB5C91852C2ABC60C2964 /* camera_avfoundation */ = {
+			isa = PBXGroup;
+			children = (
+				B350C5487D9011714AF0516D5DBA5F4F /* Resources */,
+			);
+			name = camera_avfoundation;
+			path = camera_avfoundation;
+			sourceTree = "<group>";
+		};
+		FC623CFF7AC206BC6084DEE1BA9C3187 /* permission_handler_apple */ = {
+			isa = PBXGroup;
+			children = (
+				D12DC6F0D9E0BCEB28587983CE5A650A /* .. */,
+				78B243FDBA9F41894DB0914CA25A5E38 /* Pod */,
+				8E0AC1DFE0F657DCCF81378CA23DE4BF /* Support Files */,
+			);
+			name = permission_handler_apple;
+			path = ../.symlinks/plugins/permission_handler_apple/ios;
+			sourceTree = "<group>";
+		};
+		FC6C1FF0DB5BC8F72626D0BC8584DEB6 /* permission_handler_apple */ = {
+			isa = PBXGroup;
+			children = (
+				8FCB3F48F94B48D7187EB2D0F7DD7B13 /* ios */,
+			);
+			name = permission_handler_apple;
+			path = permission_handler_apple;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		10C49B4891AB3D21D9058E7B66A82D6D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				481802C94C61A0305CDBA03350586E74 /* camera_avfoundation-umbrella.h in Headers */,
+				BE856542B5B6837F5A04AE208EB7488F /* CameraPermissionUtils.h in Headers */,
+				C7617CED5919806C617AE5208E090761 /* CameraPlugin.h in Headers */,
+				F91EFDE3107CF6BA8E79093395DBF2D5 /* CameraPlugin_Test.h in Headers */,
+				178E5CE6DA19C40978AB6A1F6544608F /* CameraProperties.h in Headers */,
+				165DB6A317D70F59336F495C144D044D /* FLTCam.h in Headers */,
+				FA645E66A4FCCA888B29A3E22962DFA2 /* FLTCam_Test.h in Headers */,
+				ED83A2682F7828FC2A827A08141DD031 /* FLTCamMediaSettingsAVWrapper.h in Headers */,
+				A5DA5364F97236592BFF13E9A7B2EC2A /* FLTSavePhotoDelegate.h in Headers */,
+				D09C13147A53F83D961C472B7723C79D /* FLTSavePhotoDelegate_Test.h in Headers */,
+				07A5D49566F14D9FFB90C9F24317DFFE /* FLTThreadSafeEventChannel.h in Headers */,
+				2D58F98A94AA3F152B3F2794AF3BA6B1 /* messages.g.h in Headers */,
+				CC61F3DAC8A5F5DCC0EFD5E3F9484B57 /* QueueUtils.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		142B3D4D76C500A061E6BCF30EC9A53C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC05A1BE39A9244D5B09A2F3B09A967A /* Pods-RunnerTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F00B62B1C27FAD3D286051A04BD52C7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BCFC4C74EF53B2130F17B7594876076 /* TensorFlowLiteSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90D975663265F9E0F9D345E5772FFD77 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0637CE0AC40B94077397EBBA06CBA067 /* AppTrackingTransparencyPermissionStrategy.h in Headers */,
+				69FB4CEF858006273792F1BDB1250500 /* AssistantPermissionStrategy.h in Headers */,
+				D8197AE7C73CAF7A8A091365CCAF5B6D /* AudioVideoPermissionStrategy.h in Headers */,
+				C5922091BA81B1AC8C0D48788F95D5B4 /* BackgroundRefreshStrategy.h in Headers */,
+				7301090B60FC92CBC2D00EBEB62B6754 /* BluetoothPermissionStrategy.h in Headers */,
+				42C50D131DE0D5BB9C4280045F76F810 /* Codec.h in Headers */,
+				7C624736335D95B33D9B3D8D3E61FF99 /* ContactPermissionStrategy.h in Headers */,
+				3EF9C8E6D4EEE844A4651E111E18DA7D /* CriticalAlertsPermissionStrategy.h in Headers */,
+				CF775F42C9037777D727747EF2EFBC65 /* EventPermissionStrategy.h in Headers */,
+				29C4A6545CEB790B3C53AA9056A9BF86 /* LocationPermissionStrategy.h in Headers */,
+				041B668A63863EEF5865CFD83CC27F76 /* MediaLibraryPermissionStrategy.h in Headers */,
+				945F0082BA1629D525DDE40E29A1102A /* NotificationPermissionStrategy.h in Headers */,
+				CBC3C64FDC65E285C99495363A9AA188 /* permission_handler_apple-umbrella.h in Headers */,
+				B5300FBB6452C1FF593163E08CA3872E /* PermissionHandlerEnums.h in Headers */,
+				74FABC77C7E9D4AADDB0C7DE54F27D64 /* PermissionHandlerPlugin.h in Headers */,
+				267F0A688FBD79D8D8B5006DB65DEC03 /* PermissionManager.h in Headers */,
+				AA703F1B4EDF4A1B790C1B379B62F731 /* PermissionStrategy.h in Headers */,
+				BB0BAF37B568EC228B594D63007415A1 /* PhonePermissionStrategy.h in Headers */,
+				02F073785C3533903ECB85AB642FB324 /* PhotoPermissionStrategy.h in Headers */,
+				691AAEFE844531D32DB4751B6057183E /* SensorPermissionStrategy.h in Headers */,
+				67FB6C49C79C1868FDA03F3829653048 /* SpeechPermissionStrategy.h in Headers */,
+				10CE4F0E0F5C1B1346504F7214238993 /* StoragePermissionStrategy.h in Headers */,
+				06FB77DE5182BA1749CFC7CAD9EEE1C7 /* UnknownPermissionStrategy.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B063B293B2CF8DDF4701928C7ED7923A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D242738248FE37D2B2871D8C37B79D2 /* Pods-Runner-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0B1B7EBF63BB39238A152C7553F0A9FD /* camera_avfoundation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87282926D758905273BA726290777298 /* Build configuration list for PBXNativeTarget "camera_avfoundation" */;
+			buildPhases = (
+				10C49B4891AB3D21D9058E7B66A82D6D /* Headers */,
+				B84971D6482A498FF7524B9901C5F160 /* Sources */,
+				C24FE15DE83CAB156D5FE3CF72366C4D /* Frameworks */,
+				B5E10BC85D04400998DA40FE45A2CEEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2816022F33996BFEEE496E9331C71CB3 /* PBXTargetDependency */,
+				CF1063AD425FBFB3F267162AC0A90136 /* PBXTargetDependency */,
+			);
+			name = camera_avfoundation;
+			productName = camera_avfoundation;
+			productReference = AD23E40CD48FC8E37DB61F915EBE813E /* camera_avfoundation */;
+			productType = "com.apple.product-type.framework";
+		};
+		10418167F619D6DA72BADAD10F9EC02B /* TensorFlowLiteSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34CBE7B4C70BD2396E71EBD476C96638 /* Build configuration list for PBXNativeTarget "TensorFlowLiteSwift" */;
+			buildPhases = (
+				2F00B62B1C27FAD3D286051A04BD52C7 /* Headers */,
+				A0D2AA8526E17F5DCE2BE9B29F506FAC /* Sources */,
+				C5D2BFC71FE8FEA2100A0575640DC57B /* Frameworks */,
+				6FBCD4993FD78C129AEFDE698EBF7736 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				982C68C5324ADF85E3C16775CB9619C9 /* PBXTargetDependency */,
+			);
+			name = TensorFlowLiteSwift;
+			productName = TensorFlowLite;
+			productReference = E0B71FE13AA6B05010059EB4B8D87919 /* TensorFlowLiteSwift */;
+			productType = "com.apple.product-type.framework";
+		};
+		3232F0C0E7C65B232832393F9ADDD8C3 /* Pods-RunnerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C93FE463016A8F6A183A1AD3D9FA6BAD /* Build configuration list for PBXNativeTarget "Pods-RunnerTests" */;
+			buildPhases = (
+				142B3D4D76C500A061E6BCF30EC9A53C /* Headers */,
+				E10C36E928F64731CA20595F8549B229 /* Sources */,
+				195B28298C85805794E9556F7EA07882 /* Frameworks */,
+				1FCDCF5B151D07CE5E500ACCA90F4EF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				424E7796B894783B7B2A70227D01AC0F /* PBXTargetDependency */,
+			);
+			name = "Pods-RunnerTests";
+			productName = Pods_RunnerTests;
+			productReference = 6C3345B1B3CAEDF5B03B1F731FDC492E /* Pods-RunnerTests */;
+			productType = "com.apple.product-type.framework";
+		};
+		517E8BED8B0E6D6FD078BD19B0A13893 /* permission_handler_apple-permission_handler_apple_privacy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 028B07D2BE6CA72F40F0D3AD55F86236 /* Build configuration list for PBXNativeTarget "permission_handler_apple-permission_handler_apple_privacy" */;
+			buildPhases = (
+				3E31C615C74367F5A58019AB6EDCF9FD /* Sources */,
+				134606AD9D08CA419A956ED946CBCDD3 /* Frameworks */,
+				6F8FFCC78F58C0EAA4B3B30AB4AC236F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "permission_handler_apple-permission_handler_apple_privacy";
+			productName = permission_handler_apple_privacy;
+			productReference = 4683C6A6BA60720F17CAD71C28988BDC /* permission_handler_apple-permission_handler_apple_privacy */;
+			productType = "com.apple.product-type.bundle";
+		};
+		8B74B458B450D74B75744B87BD747314 /* Pods-Runner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A36D161855489C8EDBEF5D63D0F1CC4 /* Build configuration list for PBXNativeTarget "Pods-Runner" */;
+			buildPhases = (
+				B063B293B2CF8DDF4701928C7ED7923A /* Headers */,
+				54A00E17532CA2CFA76EE8D6A72D1A55 /* Sources */,
+				8A3FA85BD3522B43DFB2916D78592B4B /* Frameworks */,
+				9E0E5692893FA555D4D57DB46061C4B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				36EAE41C6E07624842B625D64C2B91F0 /* PBXTargetDependency */,
+				BDBAF6AA83E967BDF5EA66593F0BF9EB /* PBXTargetDependency */,
+				0111C60ADEAA76508144116F23DE7D4D /* PBXTargetDependency */,
+				5AE7E1DDA0926848F82676955858C282 /* PBXTargetDependency */,
+				F3AED92F4A3F4BD8FD015BAEF1948986 /* PBXTargetDependency */,
+				63650FCCB29B086C0F315CEEDD90E7FE /* PBXTargetDependency */,
+			);
+			name = "Pods-Runner";
+			productName = Pods_Runner;
+			productReference = 669E8F25E1897672BDB80B7EB784DA24 /* Pods-Runner */;
+			productType = "com.apple.product-type.framework";
+		};
+		A45E503409C9530E1F5D12C293F4BD67 /* permission_handler_apple */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34E7DC288153BCF9831D3047CB5606FB /* Build configuration list for PBXNativeTarget "permission_handler_apple" */;
+			buildPhases = (
+				90D975663265F9E0F9D345E5772FFD77 /* Headers */,
+				A9D1535E3203486816188CD44D6F6EB4 /* Sources */,
+				9DF915DB0F3EA19ED771DF4016AB2851 /* Frameworks */,
+				A0079EF87473E948B0374C2E62780D24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7DF311086A29078D65A625C6EF763AAD /* PBXTargetDependency */,
+				EA8899B9822228450ECF641FBC3408D4 /* PBXTargetDependency */,
+			);
+			name = permission_handler_apple;
+			productName = permission_handler_apple;
+			productReference = C7AD28D5FB25A8DEDF61F78996932FA6 /* permission_handler_apple */;
+			productType = "com.apple.product-type.framework";
+		};
+		D9677C5D523C2FD0AE2B9C4A7BDA913F /* camera_avfoundation-camera_avfoundation_privacy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFBF75FF7BC542A2C3734C0094FD5830 /* Build configuration list for PBXNativeTarget "camera_avfoundation-camera_avfoundation_privacy" */;
+			buildPhases = (
+				60855C3904C7CE966DA17494F0C16D6D /* Sources */,
+				D748DE11BD9DBC0E83FD8E4E696C5729 /* Frameworks */,
+				9E03745F44E4C1D82BF60286AB4EF19D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "camera_avfoundation-camera_avfoundation_privacy";
+			productName = camera_avfoundation_privacy;
+			productReference = F98E22378D717282AC5FEBD48292E0CC /* camera_avfoundation-camera_avfoundation_privacy */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 2C2F6DAC4CF99382A4F9243BC123DFF9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0B1B7EBF63BB39238A152C7553F0A9FD /* camera_avfoundation */,
+				D9677C5D523C2FD0AE2B9C4A7BDA913F /* camera_avfoundation-camera_avfoundation_privacy */,
+				1EFDDC32A34D56D411E640A81DCD9E73 /* Flutter */,
+				A45E503409C9530E1F5D12C293F4BD67 /* permission_handler_apple */,
+				517E8BED8B0E6D6FD078BD19B0A13893 /* permission_handler_apple-permission_handler_apple_privacy */,
+				8B74B458B450D74B75744B87BD747314 /* Pods-Runner */,
+				3232F0C0E7C65B232832393F9ADDD8C3 /* Pods-RunnerTests */,
+				AC559E53E13B6FBEF4F5CC310A73AFE6 /* TensorFlowLiteC */,
+				10418167F619D6DA72BADAD10F9EC02B /* TensorFlowLiteSwift */,
+				E21B750823D431C0E227E6826B3218B8 /* tflite_flutter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1FCDCF5B151D07CE5E500ACCA90F4EF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F8FFCC78F58C0EAA4B3B30AB4AC236F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41D315C76A494CAFEE3A1AF74B8002EC /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FBCD4993FD78C129AEFDE698EBF7736 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E03745F44E4C1D82BF60286AB4EF19D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACF3B554C852F90A8AF30098A76FF9CB /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E0E5692893FA555D4D57DB46061C4B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0079EF87473E948B0374C2E62780D24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5E10BC85D04400998DA40FE45A2CEEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D82BB4C9829EAE7B94E4F6F382EF5D2 /* camera_avfoundation-camera_avfoundation_privacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CCB8A945E354CCB35B939DFBE3FF09CF /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/TensorFlowLiteC/TensorFlowLiteC-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/TensorFlowLiteC/TensorFlowLiteC-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/TensorFlowLiteC/TensorFlowLiteC-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E31C615C74367F5A58019AB6EDCF9FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54A00E17532CA2CFA76EE8D6A72D1A55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80DDFFD16A2A827CDA0E904DB50FFDCA /* Pods-Runner-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60855C3904C7CE966DA17494F0C16D6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0D2AA8526E17F5DCE2BE9B29F506FAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D381CDCDFEA259E19EB4267B4173BC76 /* CoreMLDelegate.swift in Sources */,
+				0E84BE689228E901A78F319E7304B4F6 /* Delegate.swift in Sources */,
+				4AE024DE7ED31089DF0FF480EC4A6CBE /* Interpreter.swift in Sources */,
+				EA3A22B82FCCBFA0A31349459FCAC69F /* InterpreterError.swift in Sources */,
+				FAB320FF6CE7100C86B9B5190C5D2B80 /* MetalDelegate.swift in Sources */,
+				B0D877D060E4E1D3798B293A2FDB6549 /* Model.swift in Sources */,
+				A17B0E1EF47521EA44FFC916B92A936A /* QuantizationParameters.swift in Sources */,
+				71E60BC325CA3FE1826B00B21051C0FC /* SignatureRunner.swift in Sources */,
+				897972E5A18F802319B01D1E6FF23DD9 /* SignatureRunnerError.swift in Sources */,
+				A853C9BFF9EDDC2D9CFCDDF5E62BAA59 /* Tensor.swift in Sources */,
+				AE5D41411EF87256B17CBAAFD5354F49 /* TensorFlowLite.swift in Sources */,
+				A6F0D0633FD9140EDC3E0958C1E56E57 /* TensorFlowLiteSwift-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9D1535E3203486816188CD44D6F6EB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93141300C7561592E836207046B973B6 /* AppTrackingTransparencyPermissionStrategy.m in Sources */,
+				4177D3B1F798681D5C658D2D2D145618 /* AssistantPermissionStrategy.m in Sources */,
+				DD107C4734C9A6E4B0E95532ABFF2C25 /* AudioVideoPermissionStrategy.m in Sources */,
+				972BCA69C1F4E79B79AAEC090DAAE320 /* BackgroundRefreshStrategy.m in Sources */,
+				205133714A6B1EEB681A8AD1EB91F9B9 /* BluetoothPermissionStrategy.m in Sources */,
+				3DC915465ED14D45FEB9EF62F44D7375 /* Codec.m in Sources */,
+				6D8C0300E46726817C3814E1DB670A15 /* ContactPermissionStrategy.m in Sources */,
+				4AA65F2AD5C82E181D64832BE2B4F9CA /* CriticalAlertsPermissionStrategy.m in Sources */,
+				5840A8AFA1BF8CA9DC36D9D527F1AEEF /* EventPermissionStrategy.m in Sources */,
+				5B36F08A6E83651FC213340E9F2CA55F /* LocationPermissionStrategy.m in Sources */,
+				243A263256A34F58C00D48AB417E1FB7 /* MediaLibraryPermissionStrategy.m in Sources */,
+				EA06C88D478A61FDC5A5AC1B9AB48086 /* NotificationPermissionStrategy.m in Sources */,
+				4E2DD7D006B85DB28BD826502DABAAA8 /* permission_handler_apple-dummy.m in Sources */,
+				AAE3929CC5A4AA7FEEA202BB01D50E3B /* PermissionHandlerPlugin.m in Sources */,
+				6F502FBF67A4235635F29850AA503515 /* PermissionManager.m in Sources */,
+				DF94488574FEAD48FD71E0A067ABBCB7 /* PhonePermissionStrategy.m in Sources */,
+				F3B39A5FE04A2299FC10EA3DD830B860 /* PhotoPermissionStrategy.m in Sources */,
+				05EA6C32FE16EFD546279FFCB0F5E058 /* SensorPermissionStrategy.m in Sources */,
+				01728FBE48DED74843EFD8F0F3754673 /* SpeechPermissionStrategy.m in Sources */,
+				8AA349010C26E997B0ECE733B5A270E7 /* StoragePermissionStrategy.m in Sources */,
+				79000FBEDC0505F04ED1DC78E93BDD14 /* UnknownPermissionStrategy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B84971D6482A498FF7524B9901C5F160 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				874CC5295247524E9A8D10B2F82FF10B /* camera_avfoundation-dummy.m in Sources */,
+				D2AB4BA90AF02360345CFF4F2074F317 /* CameraPermissionUtils.m in Sources */,
+				F5F34F334736CBF554FB5577806A7D44 /* CameraPlugin.m in Sources */,
+				114B3E2B37B8DAD425305B30F2B451A7 /* CameraProperties.m in Sources */,
+				074591B4A2D8E276750EC96E559B9DBB /* FLTCam.m in Sources */,
+				D45D7E9E46458C3945F516B680ABE7B4 /* FLTCamMediaSettingsAVWrapper.m in Sources */,
+				0D55917611CA7121151B650F97A4315B /* FLTSavePhotoDelegate.m in Sources */,
+				A81C855C5C23E768172CD7FA242FF8B6 /* FLTThreadSafeEventChannel.m in Sources */,
+				F12D662924FB65FA351D223F28AEF0DA /* messages.g.m in Sources */,
+				50A1DC3F70CF86CA12FFD9F818046419 /* QueueUtils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E10C36E928F64731CA20595F8549B229 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B1E62EB116E7D7A6252B6F079890306 /* Pods-RunnerTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0111C60ADEAA76508144116F23DE7D4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TensorFlowLiteSwift;
+			target = 10418167F619D6DA72BADAD10F9EC02B /* TensorFlowLiteSwift */;
+			targetProxy = 2CF4FAA998F172C8D969BB1A0FA7E5E0 /* PBXContainerItemProxy */;
+		};
+		2816022F33996BFEEE496E9331C71CB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Flutter;
+			target = 1EFDDC32A34D56D411E640A81DCD9E73 /* Flutter */;
+			targetProxy = B162363419DD0B2626501730B798713A /* PBXContainerItemProxy */;
+		};
+		36EAE41C6E07624842B625D64C2B91F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Flutter;
+			target = 1EFDDC32A34D56D411E640A81DCD9E73 /* Flutter */;
+			targetProxy = F3D56A1F8F9A9F8E65F89341DB074D71 /* PBXContainerItemProxy */;
+		};
+		424E7796B894783B7B2A70227D01AC0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Runner";
+			target = 8B74B458B450D74B75744B87BD747314 /* Pods-Runner */;
+			targetProxy = 15FBCD3E88AFA94ADC2F4E661E647408 /* PBXContainerItemProxy */;
+		};
+		51915938A6751C4322B7E934213CFC66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Flutter;
+			target = 1EFDDC32A34D56D411E640A81DCD9E73 /* Flutter */;
+			targetProxy = 7CF2AEBC7BB40D9B8A4985BE31DC387F /* PBXContainerItemProxy */;
+		};
+		5614D0AEAB5A55710811491EFD32E56E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TensorFlowLiteSwift;
+			target = 10418167F619D6DA72BADAD10F9EC02B /* TensorFlowLiteSwift */;
+			targetProxy = 600395999B803131DFE2BC2BD9BBA146 /* PBXContainerItemProxy */;
+		};
+		5AE7E1DDA0926848F82676955858C282 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = camera_avfoundation;
+			target = 0B1B7EBF63BB39238A152C7553F0A9FD /* camera_avfoundation */;
+			targetProxy = 5A97F6FF7841C2FB5AC933B683CCB87E /* PBXContainerItemProxy */;
+		};
+		63650FCCB29B086C0F315CEEDD90E7FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = tflite_flutter;
+			target = E21B750823D431C0E227E6826B3218B8 /* tflite_flutter */;
+			targetProxy = 3E48250126E794EAC476A281346B97ED /* PBXContainerItemProxy */;
+		};
+		7DF311086A29078D65A625C6EF763AAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Flutter;
+			target = 1EFDDC32A34D56D411E640A81DCD9E73 /* Flutter */;
+			targetProxy = AE6903CADFF43EF717ADD3ED3919B8B7 /* PBXContainerItemProxy */;
+		};
+		982C68C5324ADF85E3C16775CB9619C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TensorFlowLiteC;
+			target = AC559E53E13B6FBEF4F5CC310A73AFE6 /* TensorFlowLiteC */;
+			targetProxy = 94151BA9152466FB0327FFDEAED2DC40 /* PBXContainerItemProxy */;
+		};
+		BDBAF6AA83E967BDF5EA66593F0BF9EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TensorFlowLiteC;
+			target = AC559E53E13B6FBEF4F5CC310A73AFE6 /* TensorFlowLiteC */;
+			targetProxy = 70D42429B3DF6635870B26EA894AB239 /* PBXContainerItemProxy */;
+		};
+		CF1063AD425FBFB3F267162AC0A90136 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "camera_avfoundation-camera_avfoundation_privacy";
+			target = D9677C5D523C2FD0AE2B9C4A7BDA913F /* camera_avfoundation-camera_avfoundation_privacy */;
+			targetProxy = 8C9061B1E3A573F44320DCD24C003DB9 /* PBXContainerItemProxy */;
+		};
+		EA8899B9822228450ECF641FBC3408D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "permission_handler_apple-permission_handler_apple_privacy";
+			target = 517E8BED8B0E6D6FD078BD19B0A13893 /* permission_handler_apple-permission_handler_apple_privacy */;
+			targetProxy = 7A6C0C508C8FD74CFE485EDC694D0873 /* PBXContainerItemProxy */;
+		};
+		F3AED92F4A3F4BD8FD015BAEF1948986 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = permission_handler_apple;
+			target = A45E503409C9530E1F5D12C293F4BD67 /* permission_handler_apple */;
+			targetProxy = FEB00A24AD70EF7AF3FB9935785973A2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		106A699208CE4C5ECF03D44F04D1A51F /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9925E78146C76A9A9F386091241D0A4D /* camera_avfoundation.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_IDENTITY = "-";
+				CODE_SIGNING_REQUIRED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/camera_avfoundation";
+				EXPANDED_CODE_SIGN_IDENTITY = "-";
+				IBSC_MODULE = camera_avfoundation;
+				INFOPLIST_FILE = "Target Support Files/camera_avfoundation/ResourceBundle-camera_avfoundation_privacy-camera_avfoundation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = camera_avfoundation_privacy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Profile;
+		};
+		1565FDC226E35BC24CBBC419F6E188FC /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FC96341216BBB5BBE3744FB1F35DEEE /* Pods-RunnerTests.profile.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.modulemap";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Profile;
+		};
+		1819B7929BCB2F2927819074AB69357C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA7F9F98B09395C1092878803B28C10F /* Flutter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		19C1B5201485DFB3160241FA962BE606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7B9BCA7EE356C04AE053DCAEC668AE7 /* Flutter.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1F0AC814E11C84695301DF16B9BE4C14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 913F3DEAF8ED7EE5BCCAED29E6E08D60 /* permission_handler_apple.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_IDENTITY = "-";
+				CODE_SIGNING_REQUIRED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/permission_handler_apple";
+				EXPANDED_CODE_SIGN_IDENTITY = "-";
+				IBSC_MODULE = permission_handler_apple;
+				INFOPLIST_FILE = "Target Support Files/permission_handler_apple/ResourceBundle-permission_handler_apple_privacy-permission_handler_apple-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = permission_handler_apple_privacy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		25A15A7CF5506C04E952061299A089EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD84068DA2A66310702873AA249BAB2E /* tflite_flutter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+			};
+			name = Release;
+		};
+		2B9E26EAE2CD392AD762421F663075A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		2FCBCBAAF60E56779FDC22CCE6192E49 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 913F3DEAF8ED7EE5BCCAED29E6E08D60 /* permission_handler_apple.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_IDENTITY = "-";
+				CODE_SIGNING_REQUIRED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/permission_handler_apple";
+				EXPANDED_CODE_SIGN_IDENTITY = "-";
+				IBSC_MODULE = permission_handler_apple;
+				INFOPLIST_FILE = "Target Support Files/permission_handler_apple/ResourceBundle-permission_handler_apple_privacy-permission_handler_apple-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = permission_handler_apple_privacy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Profile;
+		};
+		3D6D9E36F5A303804B7061FBAB8FB017 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B3AF9D90D4B088422687FFF4641CBC3 /* Pods-Runner.profile.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Target Support Files/Pods-Runner/Pods-Runner-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Runner/Pods-Runner.modulemap";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Profile;
+		};
+		45DCF81C17A5B5B620ABBEF23BDC5FE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 603E093CBC3E6AA2363409F3CC7EB159 /* permission_handler_apple.debug.xcconfig */;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				GCC_PREFIX_HEADER = "Target Support Files/permission_handler_apple/permission_handler_apple-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/permission_handler_apple/permission_handler_apple-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/permission_handler_apple/permission_handler_apple.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				PRODUCT_MODULE_NAME = permission_handler_apple;
+				PRODUCT_NAME = permission_handler_apple;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5A3849591D2CAB30DED0112EADDE0797 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ADB61306F50F60E65BED44878011822 /* Pods-RunnerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.modulemap";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5AF1AC88E5F655C93D1E3B5012F6FDC8 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_PROFILE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Profile;
+		};
+		5B8DEC5EEC3FD60390995A5B3448BC00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 603E093CBC3E6AA2363409F3CC7EB159 /* permission_handler_apple.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_IDENTITY = "-";
+				CODE_SIGNING_REQUIRED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/permission_handler_apple";
+				EXPANDED_CODE_SIGN_IDENTITY = "-";
+				IBSC_MODULE = permission_handler_apple;
+				INFOPLIST_FILE = "Target Support Files/permission_handler_apple/ResourceBundle-permission_handler_apple_privacy-permission_handler_apple-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = permission_handler_apple_privacy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		5F0FC82749AC2CAB9F36071228D3C1B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23B71C979BF5B4405B8626A39841C8F1 /* TensorFlowLiteC.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5F1A58A2158DFEDA55C4AB04156B44B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7B0617D0E6EA44C9ABAB1567DF28E7D /* TensorFlowLiteSwift.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TensorFlowLiteSwift/TensorFlowLiteSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TensorFlowLiteSwift/TensorFlowLiteSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/TensorFlowLiteSwift/TensorFlowLiteSwift.modulemap";
+				PRODUCT_MODULE_NAME = TensorFlowLite;
+				PRODUCT_NAME = TensorFlowLite;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		7CC1A1AC4FD47F904834E4D284CD30CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8547457089967DAC30C3130D4EDF7D1 /* Pods-Runner.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Target Support Files/Pods-Runner/Pods-Runner-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Runner/Pods-Runner.modulemap";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8795E2596E8CF67C04D61C4F8163D972 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7B0617D0E6EA44C9ABAB1567DF28E7D /* TensorFlowLiteSwift.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TensorFlowLiteSwift/TensorFlowLiteSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TensorFlowLiteSwift/TensorFlowLiteSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/TensorFlowLiteSwift/TensorFlowLiteSwift.modulemap";
+				PRODUCT_MODULE_NAME = TensorFlowLite;
+				PRODUCT_NAME = TensorFlowLite;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Profile;
+		};
+		8DCBDBE2DA3B44CCB11561BD353666E6 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23B71C979BF5B4405B8626A39841C8F1 /* TensorFlowLiteC.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Profile;
+		};
+		92763581D4BBBA48ADCD076AC86F04E5 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD84068DA2A66310702873AA249BAB2E /* tflite_flutter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+			};
+			name = Profile;
+		};
+		9CF1039AAE22D6A9228E66F7D7353E8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 689F77421C665EE3988763FA89E0B257 /* camera_avfoundation.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_IDENTITY = "-";
+				CODE_SIGNING_REQUIRED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/camera_avfoundation";
+				EXPANDED_CODE_SIGN_IDENTITY = "-";
+				IBSC_MODULE = camera_avfoundation;
+				INFOPLIST_FILE = "Target Support Files/camera_avfoundation/ResourceBundle-camera_avfoundation_privacy-camera_avfoundation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = camera_avfoundation_privacy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		A1B008A43F57EECF293388D6D2EF6952 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64E07132B4B8BD26314BFED77733F0F2 /* TensorFlowLiteSwift.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TensorFlowLiteSwift/TensorFlowLiteSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TensorFlowLiteSwift/TensorFlowLiteSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/TensorFlowLiteSwift/TensorFlowLiteSwift.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_MODULE_NAME = TensorFlowLite;
+				PRODUCT_NAME = TensorFlowLite;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AA0E5B3221A20FCEF05AD75D142FE498 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EE698DE54290A60A095C59732D58F76 /* tflite_flutter.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+			};
+			name = Debug;
+		};
+		AEF33B96F630F5674856BE7AA4E730B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 913F3DEAF8ED7EE5BCCAED29E6E08D60 /* permission_handler_apple.release.xcconfig */;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				GCC_PREFIX_HEADER = "Target Support Files/permission_handler_apple/permission_handler_apple-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/permission_handler_apple/permission_handler_apple-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/permission_handler_apple/permission_handler_apple.modulemap";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				PRODUCT_MODULE_NAME = permission_handler_apple;
+				PRODUCT_NAME = permission_handler_apple;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B4936453B47C3458307AC3041A13D3CE /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9925E78146C76A9A9F386091241D0A4D /* camera_avfoundation.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				GCC_PREFIX_HEADER = "Target Support Files/camera_avfoundation/camera_avfoundation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/camera_avfoundation/camera_avfoundation-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/camera_avfoundation/camera_avfoundation.modulemap";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				PRODUCT_MODULE_NAME = camera_avfoundation;
+				PRODUCT_NAME = camera_avfoundation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Profile;
+		};
+		BDBD9E2CD7E95171DD6229D269C04869 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F0908B8A5026151E2800777E4B17F20 /* Pods-Runner.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Target Support Files/Pods-Runner/Pods-Runner-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Runner/Pods-Runner.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D5C14E481997E2E924BC3B15968D2A63 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 913F3DEAF8ED7EE5BCCAED29E6E08D60 /* permission_handler_apple.release.xcconfig */;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				GCC_PREFIX_HEADER = "Target Support Files/permission_handler_apple/permission_handler_apple-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/permission_handler_apple/permission_handler_apple-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/permission_handler_apple/permission_handler_apple.modulemap";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				PRODUCT_MODULE_NAME = permission_handler_apple;
+				PRODUCT_NAME = permission_handler_apple;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Profile;
+		};
+		D8151ED8C9984BD6DEE493FED837A4A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9925E78146C76A9A9F386091241D0A4D /* camera_avfoundation.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				GCC_PREFIX_HEADER = "Target Support Files/camera_avfoundation/camera_avfoundation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/camera_avfoundation/camera_avfoundation-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/camera_avfoundation/camera_avfoundation.modulemap";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				PRODUCT_MODULE_NAME = camera_avfoundation;
+				PRODUCT_NAME = camera_avfoundation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D9FFA24C4E513B9A66F1C18E9E9C0C9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9925E78146C76A9A9F386091241D0A4D /* camera_avfoundation.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_IDENTITY = "-";
+				CODE_SIGNING_REQUIRED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/camera_avfoundation";
+				EXPANDED_CODE_SIGN_IDENTITY = "-";
+				IBSC_MODULE = camera_avfoundation;
+				INFOPLIST_FILE = "Target Support Files/camera_avfoundation/ResourceBundle-camera_avfoundation_privacy-camera_avfoundation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = camera_avfoundation_privacy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		E919AFA38BF479C76D6BA80CDAED7529 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 689F77421C665EE3988763FA89E0B257 /* camera_avfoundation.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				GCC_PREFIX_HEADER = "Target Support Files/camera_avfoundation/camera_avfoundation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/camera_avfoundation/camera_avfoundation-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/camera_avfoundation/camera_avfoundation.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				PRODUCT_MODULE_NAME = camera_avfoundation;
+				PRODUCT_NAME = camera_avfoundation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ED260D77BFFC5C2857DFB20A439C8CDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD8C8ACC853AF1B657D17AEC50E540A9 /* Pods-RunnerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/maliknadsoft/developer/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F7E5F691B952670B5C5A703D24863EF1 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA7F9F98B09395C1092878803B28C10F /* Flutter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Profile;
+		};
+		FFF0A3D2C67B841960AA12DECD66471F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B773AFB988EBF1815014E3F16266884 /* TensorFlowLiteC.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		028B07D2BE6CA72F40F0D3AD55F86236 /* Build configuration list for PBXNativeTarget "permission_handler_apple-permission_handler_apple_privacy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B8DEC5EEC3FD60390995A5B3448BC00 /* Debug */,
+				2FCBCBAAF60E56779FDC22CCE6192E49 /* Profile */,
+				1F0AC814E11C84695301DF16B9BE4C14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34CBE7B4C70BD2396E71EBD476C96638 /* Build configuration list for PBXNativeTarget "TensorFlowLiteSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1B008A43F57EECF293388D6D2EF6952 /* Debug */,
+				8795E2596E8CF67C04D61C4F8163D972 /* Profile */,
+				5F1A58A2158DFEDA55C4AB04156B44B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34E7DC288153BCF9831D3047CB5606FB /* Build configuration list for PBXNativeTarget "permission_handler_apple" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45DCF81C17A5B5B620ABBEF23BDC5FE1 /* Debug */,
+				D5C14E481997E2E924BC3B15968D2A63 /* Profile */,
+				AEF33B96F630F5674856BE7AA4E730B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B9E26EAE2CD392AD762421F663075A1 /* Debug */,
+				5AF1AC88E5F655C93D1E3B5012F6FDC8 /* Profile */,
+				63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C70CA840A9A95B3AE4B417998D17300 /* Build configuration list for PBXAggregateTarget "TensorFlowLiteC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFF0A3D2C67B841960AA12DECD66471F /* Debug */,
+				8DCBDBE2DA3B44CCB11561BD353666E6 /* Profile */,
+				5F0FC82749AC2CAB9F36071228D3C1B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A36D161855489C8EDBEF5D63D0F1CC4 /* Build configuration list for PBXNativeTarget "Pods-Runner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDBD9E2CD7E95171DD6229D269C04869 /* Debug */,
+				3D6D9E36F5A303804B7061FBAB8FB017 /* Profile */,
+				7CC1A1AC4FD47F904834E4D284CD30CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87282926D758905273BA726290777298 /* Build configuration list for PBXNativeTarget "camera_avfoundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E919AFA38BF479C76D6BA80CDAED7529 /* Debug */,
+				B4936453B47C3458307AC3041A13D3CE /* Profile */,
+				D8151ED8C9984BD6DEE493FED837A4A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94078A06C17E946ADC1F2C06726219E5 /* Build configuration list for PBXAggregateTarget "Flutter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19C1B5201485DFB3160241FA962BE606 /* Debug */,
+				F7E5F691B952670B5C5A703D24863EF1 /* Profile */,
+				1819B7929BCB2F2927819074AB69357C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1457EC6960851BE06898188382EC2DF /* Build configuration list for PBXAggregateTarget "tflite_flutter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0E5B3221A20FCEF05AD75D142FE498 /* Debug */,
+				92763581D4BBBA48ADCD076AC86F04E5 /* Profile */,
+				25A15A7CF5506C04E952061299A089EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C93FE463016A8F6A183A1AD3D9FA6BAD /* Build configuration list for PBXNativeTarget "Pods-RunnerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED260D77BFFC5C2857DFB20A439C8CDA /* Debug */,
+				1565FDC226E35BC24CBBC419F6E188FC /* Profile */,
+				5A3849591D2CAB30DED0112EADDE0797 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFBF75FF7BC542A2C3734C0094FD5830 /* Build configuration list for PBXNativeTarget "camera_avfoundation-camera_avfoundation_privacy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CF1039AAE22D6A9228E66F7D7353E8A /* Debug */,
+				106A699208CE4C5ECF03D44F04D1A51F /* Profile */,
+				D9FFA24C4E513B9A66F1C18E9E9C0C9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

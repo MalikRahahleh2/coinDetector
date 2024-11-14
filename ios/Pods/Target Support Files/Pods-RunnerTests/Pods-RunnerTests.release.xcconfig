@@ -1,0 +1,12 @@
+CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
+EXCLUDED_ARCHS[sdk=iphonesimulator*] = i386
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/TensorFlowLiteSwift" "${PODS_CONFIGURATION_BUILD_DIR}/camera_avfoundation" "${PODS_CONFIGURATION_BUILD_DIR}/permission_handler_apple" "${PODS_ROOT}/TensorFlowLiteC/Frameworks" "${PODS_XCFRAMEWORKS_BUILD_DIR}/TensorFlowLiteC/Core" "${PODS_XCFRAMEWORKS_BUILD_DIR}/TensorFlowLiteC/CoreML" "${PODS_XCFRAMEWORKS_BUILD_DIR}/TensorFlowLiteC/Metal"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/TensorFlowLiteSwift/TensorFlowLite.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/camera_avfoundation/camera_avfoundation.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/permission_handler_apple/permission_handler_apple.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -l"c++" -framework "camera_avfoundation" -weak_framework "CoreML" -weak_framework "Metal"
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods
+PODS_XCFRAMEWORKS_BUILD_DIR = $(PODS_CONFIGURATION_BUILD_DIR)/XCFrameworkIntermediates
+USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES

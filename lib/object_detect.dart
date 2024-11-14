@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:coin_detector/image_util.dart';
@@ -19,11 +20,10 @@ import 'yolo.dart';
 class YOLORawOutputs {
   List<double> detections;
   List<double>? segmentations;
-  YOLORawOutputs({ required this.detections, required this.segmentations });
+  YOLORawOutputs({required this.detections, required this.segmentations});
 }
 
-abstract class YOLOObjectDetector<ConfigT>  extends ModelBase<YOLOResult> {
-
+abstract class YOLOObjectDetector<ConfigT> extends ModelBase<YOLOResult> {
   late Interpreter _interpreter;
   late List<String> _classNames;
   late int _inputSize;
@@ -64,7 +64,6 @@ abstract class YOLOObjectDetector<ConfigT>  extends ModelBase<YOLOResult> {
     _isReady = true;
   }
 
-
   void close() {
     ensureReady();
     _interpreter.close();
@@ -74,7 +73,8 @@ abstract class YOLOObjectDetector<ConfigT>  extends ModelBase<YOLOResult> {
 
   List<YOLODetection> postprocess(List<double> outputs);
 
-  static BoundingBox<double> transformBoundingBox(BoundingBox<double> bbox, Transform transform) {
+  static BoundingBox<double> transformBoundingBox(
+      BoundingBox<double> bbox, Transform transform) {
     final c = transform.transform([bbox.x1, bbox.y1, bbox.x2, bbox.y2]);
     return BoundingBox<double>(c[0], c[1], c[2], c[3]);
   }
@@ -86,34 +86,60 @@ abstract class YOLOObjectDetector<ConfigT>  extends ModelBase<YOLOResult> {
   YOLORawOutputs mapOutputs(List<ShapedDataList<num>> outputs) {
     if (_outputIndicesSet) {
       return YOLORawOutputs(
-        detections: outputs[_detectionsOutputIndex].list as TypedDataList<double>,
-        segmentations: _segmentationsOutputIndex == -1 ? null : outputs[_segmentationsOutputIndex].list as TypedDataList<double>,
+        detections:
+            outputs[_detectionsOutputIndex].list as TypedDataList<double>,
+        segmentations: _segmentationsOutputIndex == -1
+            ? null
+            : outputs[_segmentationsOutputIndex].list as TypedDataList<double>,
       );
     }
     final numClasses = _classNames.length;
     final possibleNumBoxes = [2125, 8400, 8500];
     const batchSize = 1;
     for (final (index, output) in outputs.indexed) {
-      if (possibleNumBoxes.any((numBoxes) => output.shape.equals([batchSize, numBoxes, numClasses + 5]))) {
+      if (possibleNumBoxes.any((numBoxes) =>
+          output.shape.equals([batchSize, numBoxes, numClasses + 5]))) {
         _detectionsOutputIndex = index;
         continue;
       }
-      if (possibleNumBoxes.any((numBoxes) => output.shape.equals([batchSize, numBoxes, 33]))) {
+      if (possibleNumBoxes
+          .any((numBoxes) => output.shape.equals([batchSize, numBoxes, 33]))) {
         // TODO : figure out how this output should be called
         continue;
       }
-      if ((output.shape.length == 4) && (output.shape[0] == batchSize) && (output.shape[3] == 32) && (output.shape[1] == output.shape[2])) {
+      if ((output.shape.length == 4) &&
+          (output.shape[0] == batchSize) &&
+          (output.shape[3] == 32) &&
+          (output.shape[1] == output.shape[2])) {
         _segmentationsOutputIndex = index;
         continue;
       }
     }
     if (_detectionsOutputIndex == -1) {
-      throw UnsupportedError("None of the YOLO outputs are shaped like the detections matrix (batchSize, numBoxes, numClasses + 5)");
+      throw UnsupportedError(
+          "None of the YOLO outputs are shaped like the detections matrix (batchSize, numBoxes, numClasses + 5)");
     }
     _outputIndicesSet = true;
     return mapOutputs(outputs);
   }
 
+  image_lib.Image removeAlphaChannel(image_lib.Image image) {
+    // Create a new image with the same width and height but only 3 channels (RGB)
+    image_lib.Image rgbImage =
+        image_lib.Image(width: image.width, height: image.height);
+    for (int y = 0; y < image.height; y++) {
+      for (int x = 0; x < image.width; x++) {
+        // Extract the RGB components and discard the alpha channel
+        int pixel = image.getPixelIndex(x, y);
+        int r = (pixel >> 16) & 0xFF; // Red channel
+        int g = (pixel >> 8) & 0xFF; // Green channel
+        int b = pixel & 0xFF;
+        // Set the new pixel (without alpha)
+        rgbImage.setPixel(x, y, image.getColor(r, g, b));
+      }
+    }
+    return rgbImage;
+  }
 
   /// Gets the interpreter instance
   @override
@@ -126,7 +152,10 @@ abstract class YOLOObjectDetector<ConfigT>  extends ModelBase<YOLOResult> {
 
     dt?.next("Preprocess");
     final input = TfliteUtil.toTensor(
-        image: transformedImage.image, order: ShapeOrder.hwc);
+        image: Platform.isAndroid
+            ? transformedImage.image
+            : removeAlphaChannel(transformedImage.image),
+        order: ShapeOrder.hwc);
 
     final outputs = TfliteUtil.runImagesThoughModel(
         _interpreter, [input], dt?..push("Inference"));
@@ -138,7 +167,13 @@ abstract class YOLOObjectDetector<ConfigT>  extends ModelBase<YOLOResult> {
     final detections = postprocess(mappedOutputs.detections);
     dt?.mark();
 
-    final rescaledDetections = detections.map((d) => YOLODetection(boundingBox: transformBoundingBox(d.boundingBox, transformedImage.transform), confidence: d.confidence, label: d.label)).toList();
+    final rescaledDetections = detections
+        .map((d) => YOLODetection(
+            boundingBox:
+                transformBoundingBox(d.boundingBox, transformedImage.transform),
+            confidence: d.confidence,
+            label: d.label))
+        .toList();
 
     return YOLOResult(detections: rescaledDetections);
   }
@@ -157,9 +192,7 @@ abstract class YOLOObjectDetector<ConfigT>  extends ModelBase<YOLOResult> {
   }
 
   bool get isReady => _isReady;
-
 }
-
 
 class YOLOFrameProcessor<ConfigT> extends ModelFrameProcessor<YOLOResult> {
   final _detectorIsolate = ModelIsolate<YOLOInitData<ConfigT>, YOLOResult>();
@@ -167,7 +200,11 @@ class YOLOFrameProcessor<ConfigT> extends ModelFrameProcessor<YOLOResult> {
   final YOLOFactory<ConfigT> _factory;
   bool _initialized = false;
 
-  YOLOFrameProcessor({required YOLOObjectDetector detector, required YOLOFactory<ConfigT> factory}) : _detector = detector, _factory = factory;
+  YOLOFrameProcessor(
+      {required YOLOObjectDetector detector,
+      required YOLOFactory<ConfigT> factory})
+      : _detector = detector,
+        _factory = factory;
 
   @override
   Future<void> initialize() async {
@@ -190,7 +227,8 @@ class YOLOFrameProcessor<ConfigT> extends ModelFrameProcessor<YOLOResult> {
   }
 
   @override
-  Future<TimedResult<YOLOResult>?> run(CameraImage cameraImage, int orientation) {
+  Future<TimedResult<YOLOResult>?> run(
+      CameraImage cameraImage, int orientation) {
     return _detectorIsolate.run(cameraImage, orientation);
   }
 
@@ -203,9 +241,7 @@ class YOLOFrameProcessor<ConfigT> extends ModelFrameProcessor<YOLOResult> {
     _detector.close();
     _initialized = false;
   }
-
 }
-
 
 class YOLOResult {
   List<YOLODetection> detections;
@@ -220,25 +256,39 @@ class YOLOInitData<ConfigT> {
   ConfigT config;
 
   YOLOInitData(
-      {required this.interpreterAddress, required this.classNames, required this.config});
+      {required this.interpreterAddress,
+      required this.classNames,
+      required this.config});
 }
 
-abstract class YOLOFactory<ConfigT> extends ModelFactory<YOLOInitData<ConfigT>, YOLOResult> {
-
-}
+abstract class YOLOFactory<ConfigT>
+    extends ModelFactory<YOLOInitData<ConfigT>, YOLOResult> {}
 
 class YOLOv2Factory extends YOLOFactory<YOLOv2Config> {
   @override
   getInstance(YOLOInitData init) {
     // TODO: implement getInstance
     var instance = YOLOv2ObjectDetector.fromConfig(init.config);
-    instance.initializeFrom(interpreterAddress: init.interpreterAddress, classNames: init.classNames);
+    instance.initializeFrom(
+        interpreterAddress: init.interpreterAddress,
+        classNames: init.classNames);
     return instance;
   }
 }
 
 class YOLOv2Config {
-  static const defaultAnchors = [0.57273,0.677385,1.87446,2.06253,3.33843,5.47434,7.88282,3.52778,9.77052,9.16828];
+  static const defaultAnchors = [
+    0.57273,
+    0.677385,
+    1.87446,
+    2.06253,
+    3.33843,
+    5.47434,
+    7.88282,
+    3.52778,
+    9.77052,
+    9.16828
+  ];
   final int blockSize;
   final double threshold;
   final int numBoxesPerBlock;
@@ -277,32 +327,31 @@ class YOLOv2ObjectDetector extends YOLOObjectDetector<YOLOv2Config> {
   @override
   YOLOv2ObjectDetector() : this.fromConfig(YOLOv2Config());
   @override
-  YOLOv2ObjectDetector.fromConfig(YOLOv2Config config) :
-      _config = config,
-      super() {
+  YOLOv2ObjectDetector.fromConfig(YOLOv2Config config)
+      : _config = config,
+        super() {
     gridSize = (_inputSize ~/ config.blockSize);
   }
 
-
   List<YOLODetection> postprocess(List<double> output) {
-      final numResultsPerClass = _config.numResultsPerClass;
+    final numResultsPerClass = _config.numResultsPerClass;
 
-      final validDetections = YOLOv2.getValidDetections(
-          output,
-          numClasses: _classNames.length,
-          numBoxesPerBlock: _config.numBoxesPerBlock,
-          threshold: _config.threshold,
-          blockSize: _config.blockSize,
-          gridSize: gridSize,
-          anchors: _config.anchors,
-          classNames: _classNames,
-          inputSize: _inputSize,
-      );
-      final classCapDetections = YOLO.filterPerClass(validDetections, numResultsPerClass).toList();
-      final nmsDetections = YOLO.nonMaxSuppression(classCapDetections);
-      return nmsDetections;
+    final validDetections = YOLOv2.getValidDetections(
+      output,
+      numClasses: _classNames.length,
+      numBoxesPerBlock: _config.numBoxesPerBlock,
+      threshold: _config.threshold,
+      blockSize: _config.blockSize,
+      gridSize: gridSize,
+      anchors: _config.anchors,
+      classNames: _classNames,
+      inputSize: _inputSize,
+    );
+    final classCapDetections =
+        YOLO.filterPerClass(validDetections, numResultsPerClass).toList();
+    final nmsDetections = YOLO.nonMaxSuppression(classCapDetections);
+    return nmsDetections;
   }
-
 }
 
 class YOLOv8Config {
@@ -320,12 +369,14 @@ class YOLOv8Factory extends YOLOFactory<YOLOv8Config> {
   @override
   getInstance(YOLOInitData init) {
     var instance = YOLOv8ObjectDetector.fromConfig(init.config);
-    instance.initializeFrom(interpreterAddress: init.interpreterAddress, classNames: init.classNames);
+    instance.initializeFrom(
+        interpreterAddress: init.interpreterAddress,
+        classNames: init.classNames);
     return instance;
   }
 }
 
-class YOLOv8ObjectDetector  extends YOLOObjectDetector<YOLOv8Config> {
+class YOLOv8ObjectDetector extends YOLOObjectDetector<YOLOv8Config> {
   static const _modelPath = "assets/models/yolov8n_numa.tflite";
   static const _classNamesPath = "assets/models/yolo_numa_classes.txt";
   final YOLOv8Config _config;
@@ -349,19 +400,17 @@ class YOLOv8ObjectDetector  extends YOLOObjectDetector<YOLOv8Config> {
     final maxResultsPerClass = _config.maxResultsPerClass;
 
     final validDetections = YOLOv8.getValidDetections(
-        output,
-        inputSize: _inputSize,
-        classNames: _classNames,
-        classThreshold: _config.classThreshold,
-        confidenceThreshold: _config.confidenceThreshold,
+      output,
+      inputSize: _inputSize,
+      classNames: _classNames,
+      classThreshold: _config.classThreshold,
+      confidenceThreshold: _config.confidenceThreshold,
     ).toList();
-    final filteredDetections = YOLO.filterPerClass(validDetections, maxResultsPerClass).toList();
+    final filteredDetections =
+        YOLO.filterPerClass(validDetections, maxResultsPerClass).toList();
     return YOLO.nonMaxSuppression(filteredDetections);
   }
-
-
 }
-
 
 class YOLOv6SegConfig {
   final double classThreshold;
@@ -374,21 +423,22 @@ class YOLOv6SegConfig {
   });
 }
 
-
 class YOLOv6SegFactory extends YOLOFactory<YOLOv6SegConfig> {
   @override
   getInstance(YOLOInitData init) {
     var instance = YOLOv6SegObjectDetector.fromConfig(init.config);
-    instance.initializeFrom(interpreterAddress: init.interpreterAddress,
+    instance.initializeFrom(
+        interpreterAddress: init.interpreterAddress,
         classNames: init.classNames);
     return instance;
   }
 }
 
-class YOLOv6SegObjectDetector  extends YOLOObjectDetector<YOLOv6SegConfig> {
+class YOLOv6SegObjectDetector extends YOLOObjectDetector<YOLOv6SegConfig> {
   // static const _modelPath = "assets/models/yolov6lite_s_int8_tf-2.17.1.tflite";
   // static const _modelPath = "assets/models/yolov6s_float16-tf-2.17.1.tflite";
-  static const _modelPath = "assets/models/best_ckpt_lite-oct-29-exp2_float16.tflite";
+  static const _modelPath =
+      "assets/models/best_ckpt_lite-oct-29-exp2_float16.tflite";
 
   // static const _classNamesPath = "assets/models/yolo_classes.txt";
   static const _classNamesPath = "assets/models/yolo_numa_classes.txt";
@@ -434,17 +484,15 @@ class YOLOv6SegObjectDetector  extends YOLOObjectDetector<YOLOv6SegConfig> {
     final maxResultsPerClass = _config.maxResultsPerClass;
 
     final validDetections = YOLOv6Seg.getValidDetections(
-        output,
-        confidenceThreshold: _config.confidenceThreshold,
-        classThreshold: _config.classThreshold,
-        classNames: _classNames,
-        inputSize: _inputSize,
-        numImages: 1,
+      output,
+      confidenceThreshold: _config.confidenceThreshold,
+      classThreshold: _config.classThreshold,
+      classNames: _classNames,
+      inputSize: _inputSize,
+      numImages: 1,
     ).toList();
-    final filteredDetections = YOLO.filterPerClass(validDetections, maxResultsPerClass).toList();
+    final filteredDetections =
+        YOLO.filterPerClass(validDetections, maxResultsPerClass).toList();
     return YOLO.nonMaxSuppression(filteredDetections);
   }
-
-
 }
-

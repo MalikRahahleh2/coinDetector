@@ -35,7 +35,8 @@ class CameraScreenState extends State<CameraScreen> {
   bool _yoloAvailable = false;
   bool _clipEnabled = false;
   bool _clipAvailable = false;
-  ResolutionPreset _resolutionPreset = ResolutionPreset.low;
+  ResolutionPreset _resolutionPreset =
+      Platform.isIOS ? ResolutionPreset.medium : ResolutionPreset.low;
 
   Future<void> _initializeCameraController() async {
     final cameras = await availableCameras();
